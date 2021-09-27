@@ -3,14 +3,14 @@ function genderArticlesResume(posts) {
     if (idx === 0 || idx > 4) return;
     return (
       <div className="rounded-sm bg-white p-4 pb-5 shadow-sm" key={idx}>
-        <a href="#" className="block rounded-md overflow-hidden">
+        <a href={`/blog/${post.slug}`} className="block rounded-md overflow-hidden">
           <img
             src={post.frontmatter.banner}
             className="w-full h-60 object-cover transform hover:scale-110 transition duration-500"
           />
         </a>
         <div className="mt-3">
-          <a href="#">
+          <a href={`/blog/${post.slug}`}>
             <h2 className="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
               {post.frontmatter.title}
             </h2>

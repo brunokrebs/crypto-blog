@@ -3,10 +3,10 @@ function renderLastPosts(posts) {
     if (idx > 4) return;
 
     return (
-      <a href="#" className="flex group" key={idx}>
+      <a href={`/blog/${post.slug}`} className="flex group" key={idx}>
         <div className="flex-shrink-0">
           <img
-            src={post.frontmatter.bannner}
+            src={post.frontmatter.banner}
             className="h-14 w-20 lg:w-14 xl:w-20 rounded object-cover"
           />
         </div>
@@ -26,7 +26,7 @@ function renderLastPosts(posts) {
   });
 }
 
-export default function LastPosts({ posts }) {
+export default function LastPosts({ posts = [] }) {
   return (
     <div className="w-full mt-8 bg-white shadow-sm rounded-sm p-4 ">
       <h3 className="text-xl font-semibold text-gray-700 mb-3 font-roboto">
