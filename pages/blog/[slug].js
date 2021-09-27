@@ -396,6 +396,11 @@ export async function getStaticProps({ params: { slug } }) {
     "utf-8"
   );
   const { data: frontmatter, content } = matter(markdownWithMeta);
+  let date = new Date(frontmatter.date);
+    date =
+      date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+
+    frontmatter.date = date;
   return {
     props: {
       frontmatter,
