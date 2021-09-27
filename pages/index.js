@@ -5,57 +5,37 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Header from "../components/header";
+import Footer from "../components/footer";
+import BigArticle from "../components/big-aricle";
+import ArticlesResume from "../components/articles-remuse";
+import SocialMedias from "../components/social-medias";
+import LastPosts from "../components/last-posts";
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <div>
       <Head>
         <title>Crypto Blog</title>
       </Head>
       <Header></Header>
-      <div className="font-sans text-gray-700 antialiased bg-white">
-        <div className="text-center py-12 px-6 mt-12">
-          <h1 className="font-display font-bold text-5xl mb-6">Crypto Blog</h1>
-          <p className="max-w-lg mx-auto">Crypto Blog</p>
+      <main className="pt-12 bg-gray-100 pb-12">
+        <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
+          <div className="w-2/12 hidden xl:block"></div>
+
+          <div className="xl:w-6/12 lg:w-9/12 w-full  xl:ml-6 lg:mr-6">
+            <BigArticle post={posts[0]}/>
+
+            <ArticlesResume posts={posts}/>
+          </div>
+
+          <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
+            <SocialMedias/>
+
+            <LastPosts posts={posts}/>
+          </div>
         </div>
-        <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 pt-12 pb-24">
-          {posts.map((post, idx) => (
-            <div key={idx}>
-              <Link href="#">
-                <a>
-                  <Image
-                    width="590"
-                    height="208"
-                    src={post.frontmatter.banner}
-                    className="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
-                  />
-                </a>
-              </Link>
-
-              <div className="bg-gray-50 p-8">
-                <div className="text-xs text-gray-600 uppercase font-semibold">
-                  {post.frontmatter.date}
-                </div>
-                <h2 className="mt-3 text-3xl mb-6 font-display text-black leading-tight max-w-sm">
-                  {post.frontmatter.title}
-                </h2>
-
-                <p className="mt-4 max-w-md">{post.frontmatter.description}</p>
-
-                <Link href="#">
-                  <a
-                    href="#"
-                    className="flex items-center mt-6 uppercase text-sm text-black font-semibold"
-                  >
-                    Ler mais
-                  </a>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      </main>
+      <Footer/>
     </div>
   );
 }
@@ -89,7 +69,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts,
+      posts:posts.reverse(),
     },
   };
 }
