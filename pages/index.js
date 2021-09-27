@@ -41,21 +41,7 @@ export default function Home({ posts }) {
                   href="#"
                   className="flex items-center mt-6 uppercase text-sm text-black font-semibold"
                 >
-                  Ler artigo
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1"
-                      d="M9 5l7 7-7 7"
-                    ></path>
-                  </svg>
+                  Ler mais
                 </a>
               </div>
             </div>
