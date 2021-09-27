@@ -1,6 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -14,10 +11,7 @@ import LastPosts from "../components/last-posts";
 export default function Home({ posts }) {
   return (
     <div>
-      <Head>
-        <title>Crypto Blog</title>
-      </Head>
-      <Header></Header>
+      <Header/>
       <main className="pt-12 bg-gray-100 pb-12">
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
           <div className="w-2/12 hidden xl:block"></div>

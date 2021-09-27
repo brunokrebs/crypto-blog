@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faFacebookF,faTwitter, faInstagram, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 export default function SocialMedias() {
   return (
     <div className="w-full bg-white shadow-sm rounded-sm p-4 ">
@@ -9,31 +11,26 @@ export default function SocialMedias() {
           href="#"
           className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
         >
-          <i className="fab fa-facebook-f"></i>
+          <FontAwesomeIcon icon={faFacebookF} width={20} height={20}/>
         </a>
         <a
           href="#"
           className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
         >
-          <i className="fab fa-twitter"></i>
+          <FontAwesomeIcon icon={faTwitter} width={20} height={20}/>
         </a>
         <a
           href="#"
           className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
         >
+          <FontAwesomeIcon icon={faInstagram} width={20} height={20}/>
           <i className="fab fa-instagram"></i>
         </a>
         <a
           href="#"
           className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
         >
-          <i className="fab fa-pinterest-p"></i>
-        </a>
-        <a
-          href="#"
-          className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
-        >
-          <i className="fab fa-linkedin-in"></i>
+          <FontAwesomeIcon icon={faLinkedin} width={20} height={20}/>
         </a>
       </div>
     </div>

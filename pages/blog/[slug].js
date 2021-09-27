@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import makerd from "marked";
-import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faFacebookF,faTwitter, faInstagram, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import SocialMedias from "../../components/social-medias";
@@ -11,6 +11,7 @@ import marked from "marked";
 
 export default function PostPage({
   frontmatter: { title, date, banner, author },
+  posts,
   slug,
   content,
 }) {
@@ -24,10 +25,7 @@ export default function PostPage({
           <div className="xl:w-6/12 lg:w-9/12 w-full  xl:ml-6 lg:mr-6">
             <div className="rounded-sm overflow-hidden bg-white shadow-sm">
               <div className="">
-                <img
-                  src="images/img-12.jpg"
-                  className="w-full h-96 object-cover"
-                />
+                <img src={banner} className="w-full h-96 object-cover" />
               </div>
               <div className="p-4 pb-5">
                 <h2 className="block text-2xl font-semibold text-gray-700 font-roboto">
@@ -131,38 +129,30 @@ export default function PostPage({
                   iusto minus explicabo itaque iure recusandae
                 </p>
 
-            
-
                 <div className="mt-5 pt-5 border-t border-gray-200 flex gap-2">
                   <a
                     href="#"
                     className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
                   >
-                    <i className="fab fa-facebook-f"></i>
+                      <FontAwesomeIcon icon={faFacebookF} width={20} height={20}/>
                   </a>
                   <a
                     href="#"
                     className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
                   >
-                    <i className="fab fa-twitter"></i>
+                    <FontAwesomeIcon icon={faTwitter} width={20} height={20}/>
                   </a>
                   <a
                     href="#"
                     className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
                   >
-                    <i className="fab fa-instagram"></i>
+                    <FontAwesomeIcon icon={faInstagram} width={20} height={20}/>
                   </a>
                   <a
                     href="#"
                     className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
                   >
-                    <i className="fab fa-pinterest-p"></i>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
-                  >
-                    <i className="fab fa-linkedin-in"></i>
+                    <FontAwesomeIcon icon={faLinkedin} width={20} height={20}/>
                   </a>
                 </div>
               </div>
@@ -170,108 +160,57 @@ export default function PostPage({
 
             <div className="flex bg-white px-3 py-2 justify-between items-center rounded-sm mt-8">
               <h5 className="text-base uppercase font-semibold font-roboto">
-                Related post
+                Outros Artigos
               </h5>
-              <a
-                href="#"
-                className="text-white py-1 px-3 rounded-sm uppercase text-sm bg-blue-500 border border-blue-500 hover:text-blue-500 hover:bg-transparent transition"
-              >
-                see more
-              </a>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4">
-              <div className="rounded-sm bg-white p-3 pb-5 shadow-sm">
-                <a href="#" className="block rounded-md overflow-hidden">
-                  <img
-                    src="images/img-7.jpg"
-                    className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
-                  />
-                </a>
-                <div className="mt-3">
-                  <a href="#">
-                    <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                      Lorem, ipsum dolor amet sit consec tetur elit.
-                    </h2>
-                  </a>
-                  <div className="mt-2 flex space-x-3">
-                    <div className="flex text-gray-400 text-xs items-center">
-                      <span className="mr-1 text-xs">
-                        <i className="far fa-user"></i>
-                      </span>
-                      Blogging Tips
+              {posts
+                .filter((post) => post.slug !== slug)
+                .map((post, idx) => {
+                  if (idx > 2) return;
+                  return (
+                    <div
+                      className="rounded-sm bg-white p-3 pb-5 shadow-sm"
+                      key={idx}
+                    >
+                      <a
+                        href={`/blog/${post.slug}`}
+                        className="block rounded-md overflow-hidden"
+                      >
+                        <img
+                          src={post.frontmatter.banner}
+                          className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
+                        />
+                      </a>
+                      <div className="mt-3">
+                        <a href={`/blog/${post.slug}`}>
+                          <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
+                            {post.frontmatter.title}
+                          </h2>
+                        </a>
+                        <div className="mt-2 flex space-x-3">
+                          <div className="flex text-gray-400 text-xs items-center">
+                            <span className="mr-1 text-xs">
+                              <i className="far fa-user"></i>
+                            </span>
+                            {post.frontmatter.author.name}
+                          </div>
+                          <div className="flex text-gray-400 text-xs items-center">
+                            <span className="mr-1 text-xs">
+                              <i className="far fa-clock"></i>
+                            </span>
+                            {post.frontmatter.date}
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex text-gray-400 text-xs items-center">
-                      <span className="mr-1 text-xs">
-                        <i className="far fa-clock"></i>
-                      </span>
-                      June 11, 2021
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-sm bg-white p-3 pb-5 shadow-sm">
-                <a href="#" className="block rounded-md overflow-hidden">
-                  <img
-                    src="images/img-5.jpg"
-                    className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
-                  />
-                </a>
-                <div className="mt-3">
-                  <a href="#">
-                    <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                      Lorem, ipsum dolor amet sit consec tetur elit.
-                    </h2>
-                  </a>
-                  <div className="mt-2 flex space-x-3">
-                    <div className="flex text-gray-400 text-xs items-center">
-                      <span className="mr-1 text-xs">
-                        <i className="far fa-user"></i>
-                      </span>
-                      Blogging Tips
-                    </div>
-                    <div className="flex text-gray-400 text-xs items-center">
-                      <span className="mr-1 text-xs">
-                        <i className="far fa-clock"></i>
-                      </span>
-                      June 11, 2021
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-sm bg-white p-3 pb-5 shadow-sm hidden md:block">
-                <a href="#" className="block rounded-md overflow-hidden">
-                  <img
-                    src="images/img-6.jpg"
-                    className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
-                  />
-                </a>
-                <div className="mt-3">
-                  <a href="#">
-                    <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                      Lorem, ipsum dolor amet sit consec tetur elit.
-                    </h2>
-                  </a>
-                  <div className="mt-2 flex space-x-3">
-                    <div className="flex text-gray-400 text-xs items-center">
-                      <span className="mr-1 text-xs">
-                        <i className="far fa-user"></i>
-                      </span>
-                      Blogging Tips
-                    </div>
-                    <div className="flex text-gray-400 text-xs items-center">
-                      <span className="mr-1 text-xs">
-                        <i className="far fa-clock"></i>
-                      </span>
-                      June 11, 2021
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  );
+                })}
             </div>
 
-            {/*comments */}
-            <div className="p-4 bg-white rounded-sm shadow-sm mt-8">
+            {/* for future when adding comments 
+             <div className="p-4 bg-white rounded-sm shadow-sm mt-8">
               <h4 className="text-base uppercase  font-semibold mb-4 font-roboto">
                 Post a comment
               </h4>
@@ -299,51 +238,7 @@ export default function PostPage({
                       </button>
                     </div>
                   </div>
-                </div>
-                <div className="flex items-start border-b  pb-5 border-gray-200">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <img src="images/avatar-2.png" className="w-full" />
-                  </div>
-                  <div className="flex-grow pl-4">
-                    <h4 className="text-base  font-roboto">John Doe</h4>
-                    <p className="text-xs text-gray-400">
-                      9 Aprile 2021 at 12:34 AM
-                    </p>
-                    <p className="text-sm font-600 mt-2">
-                      Great article. Thanks
-                    </p>
-                    <div className="flex gap-2 mt-2">
-                      <button className="text-gray-500 px-1 text-xs border border-gray-200 rounded-sm shadow-sm hover:bg-blue-500 hover:text-white transition">
-                        Reply
-                      </button>
-                      <button className="text-gray-500 px-1 text-xs border border-gray-200 rounded-sm shadow-sm hover:bg-blue-500 hover:text-white transition">
-                        Delete
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <img src="images/avatar.png" className="w-full" />
-                  </div>
-                  <div className="flex-grow pl-4">
-                    <h4 className="text-base  font-roboto">Rasel Ahmed</h4>
-                    <p className="text-xs text-gray-400">
-                      9 Aprile 2021 at 12:34 AM
-                    </p>
-                    <p className="text-sm font-600 mt-2">
-                      Great article. Thanks
-                    </p>
-                    <div className="flex gap-2 mt-2">
-                      <button className="text-gray-500 px-1 text-xs border border-gray-200 rounded-sm shadow-sm hover:bg-blue-500 hover:text-white transition">
-                        Reply
-                      </button>
-                      <button className="text-gray-500 px-1 text-xs border border-gray-200 rounded-sm shadow-sm hover:bg-blue-500 hover:text-white transition">
-                        Delete
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                </div>                
               </div>
 
               <form action="#" className="mt-8">
@@ -362,10 +257,10 @@ export default function PostPage({
                   </butotn>
                 </div>
               </form>
-            </div>
+            </div> */}
           </div>
 
-          <div classNameName="lg:w-3/12 w-full mt-8 lg:mt-0">
+          <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
 
             <LastPosts />
@@ -395,17 +290,43 @@ export async function getStaticProps({ params: { slug } }) {
     path.join("posts", slug + ".md"),
     "utf-8"
   );
-  const { data: frontmatter, content } = matter(markdownWithMeta);
-  let date = new Date(frontmatter.date);
+  const files = fs.readdirSync(path.join("posts"));
+
+  //Get slug and formmater from posts
+  const posts = files.map((filename) => {
+    //create slug
+    const slug = filename.replace(".md", "");
+
+    //Get frontmatter
+    const markdownWithMeta = fs.readFileSync(
+      path.join("posts", filename),
+      "utf-8"
+    );
+    const { data: frontmatter } = matter(markdownWithMeta);
+
+    let date = new Date(frontmatter.date);
     date =
       date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 
     frontmatter.date = date;
+    return {
+      slug,
+      frontmatter,
+    };
+  });
+  const { data: frontmatter, content } = matter(markdownWithMeta);
+  let date = new Date(frontmatter.date);
+  date =
+    date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+
+  frontmatter.date = date;
+
   return {
     props: {
       frontmatter,
       slug,
       content,
+      posts,
     },
   };
 }
