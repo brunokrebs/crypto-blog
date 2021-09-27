@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -20,12 +22,16 @@ export default function Home({ posts }) {
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 pt-12 pb-24">
           {posts.map((post, idx) => (
             <div key={idx}>
-              <a href="#">
-                <img
-                  src={post.frontmatter.banner}
-                  className="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
-                />
-              </a>
+              <Link href="#">
+                <a>
+                  <Image
+                    width="590"
+                    height="208"
+                    src={post.frontmatter.banner}
+                    className="w-full h-52 md:h-64 lg:h-96 xl:h-64 object-cover"
+                  />
+                </a>
+              </Link>
 
               <div className="bg-gray-50 p-8">
                 <div className="text-xs text-gray-600 uppercase font-semibold">
@@ -37,12 +43,14 @@ export default function Home({ posts }) {
 
                 <p className="mt-4 max-w-md">{post.frontmatter.description}</p>
 
-                <a
-                  href="#"
-                  className="flex items-center mt-6 uppercase text-sm text-black font-semibold"
-                >
-                  Ler mais
-                </a>
+                <Link href="#">
+                  <a
+                    href="#"
+                    className="flex items-center mt-6 uppercase text-sm text-black font-semibold"
+                  >
+                    Ler mais
+                  </a>
+                </Link>
               </div>
             </div>
           ))}
