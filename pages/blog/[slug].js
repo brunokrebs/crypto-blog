@@ -41,7 +41,7 @@ export default function PostPage({
                 <h2 className=" text-center block text-2xl font-semibold text-gray-700 font-roboto">
                   {title}
                 </h2>
-                <div className="mt-2 flex space-x-4">
+                <div className="mt-2 flex space-x-4 justify-center">
                   <div className="flex text-gray-400 text-sm items-center text-center">
                     <span className="mr-2 text-xs">
                       <i className="far fa-user"></i>
@@ -345,8 +345,11 @@ export async function getStaticProps({ params: { slug } }) {
   });
   
   //Complete article information
+  
   const { data: frontmatter, content } = matter(markdownWithMeta);
+  console.log(frontmatter)
   let date = new Date(frontmatter.date);
+
   date =
     date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 
