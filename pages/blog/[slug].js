@@ -26,7 +26,7 @@ export default function PostPage({
       <Header />
       <main className="pt-12 bg-gray-100 pb-12">
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
-          <div className="w-3/12 hidden xl:block"></div>
+        <div className="w-2/12 hidden xl:block"></div>
 
           <div className="xl:w-6/12 lg:w-9/12 w-full  xl:ml-6 lg:mr-6">
             <div className="rounded-sm overflow-hidden bg-white shadow-sm">
@@ -37,8 +37,8 @@ export default function PostPage({
                 <h2 className=" text-center block text-2xl font-semibold text-gray-700 font-roboto">
                   {title}
                 </h2>
-                <div className="mt-2 flex space-x-4 justify-center">
-                  <div className="flex text-gray-400 text-sm items-center">
+                <div className="mt-2 flex space-x-4">
+                  <div className="flex text-gray-400 text-sm items-center text-center">
                     <span className="mr-2 text-xs">
                       <i className="far fa-user"></i>
                     </span>
