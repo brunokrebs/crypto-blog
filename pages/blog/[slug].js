@@ -2,6 +2,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import showdown from "showdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -21,6 +22,7 @@ export default function PostPage({
   slug,
   content,
 }) {
+
   return (
     <>
       <Header />
@@ -53,8 +55,9 @@ export default function PostPage({
                 </div>
 
                 <div className="pt-4 flex justify-center">
+                  
                   <div
-                    className="prose"
+                    className="prose prose-blue"
                     dangerouslySetInnerHTML={{ __html: marked(content) }}
                   ></div>
                 </div>
@@ -311,12 +314,12 @@ export async function getStaticProps({ params: { slug } }) {
   );
   const files = fs.readdirSync(path.join("posts"));
 
-  //Get slug and formmater from posts
+  
   const posts = files.map((filename) => {
-    //create slug
+    
     const slug = filename.replace(".md", "");
 
-    //Get frontmatter
+    
     const markdownWithMeta = fs.readFileSync(
       path.join("posts", filename),
       "utf-8"
@@ -333,13 +336,15 @@ export async function getStaticProps({ params: { slug } }) {
       frontmatter,
     };
   });
-
+  
+  //Complete article information
   const { data: frontmatter, content } = matter(markdownWithMeta);
   let date = new Date(frontmatter.date);
   date =
     date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 
   frontmatter.date = date;
+  //Complete article end
 
   return {
     props: {
