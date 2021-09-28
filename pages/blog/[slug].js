@@ -34,10 +34,10 @@ export default function PostPage({
                 <img src={banner} className="w-full h-96 object-cover" />
               </div>
               <div className="p-4 pb-5">
-                <h2 className="block text-2xl font-semibold text-gray-700 font-roboto">
+                <h2 className=" text-center block text-2xl font-semibold text-gray-700 font-roboto">
                   {title}
                 </h2>
-                <div className="mt-2 flex space-x-4">
+                <div className="mt-2 flex space-x-4 justify-center">
                   <div className="flex text-gray-400 text-sm items-center">
                     <span className="mr-2 text-xs">
                       <i className="far fa-user"></i>
@@ -52,13 +52,14 @@ export default function PostPage({
                   </div>
                 </div>
 
-                <div className="prose">
+                <div className="pt-4 flex justify-center">
                   <div
+                    className="prose"
                     dangerouslySetInnerHTML={{ __html: marked(content) }}
                   ></div>
                 </div>
 
-                <p className="text-gray-500 text-sm mt-5">
+                {/* <p className="text-gray-500 text-sm mt-5">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Blanditiis et sunt saepe accusamus eum ex sint est neque
                   provident tempore, minus laborum repudiandae vitae temporibus
@@ -133,7 +134,7 @@ export default function PostPage({
                   provident tempore, minus laborum repudiandae vitae temporibus
                   nesciunt, sed enim quo harum a id, alias maiores! Incidunt
                   iusto minus explicabo itaque iure recusandae
-                </p>
+                </p> */}
 
                 <div className="mt-5 pt-5 border-t border-gray-200 flex gap-2">
                   <Link href="#">

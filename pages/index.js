@@ -7,11 +7,13 @@ import BigArticle from "../components/big-aricle";
 import ArticlesResume from "../components/articles-remuse";
 import SocialMedias from "../components/social-medias";
 import LastPosts from "../components/last-posts";
+import MobileMenu from "../components/mobile-menu";
 
 export default function Home({ posts }) {
   return (
     <div>
       <Header/>
+      <MobileMenu/>
       <main className="pt-12 bg-gray-100 pb-12">
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
           <div className="w-2/12 hidden xl:block"></div>

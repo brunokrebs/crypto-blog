@@ -8,9 +8,10 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import MobileMenu from "./mobile-menu";
 
 export default function Header() {
-  const [isVisibleMenu, setIsVisibleMenu] = useState(true);
+  const [isVisibleMenu, setIsVisibleMenu] = useState(false);
   return (
     <>
       <Head>
@@ -50,12 +51,14 @@ export default function Header() {
               </a>
             </Link>
           </div>
-
           <div
             className="text-xl text-gray-700 cursor-pointer ml-4 lg:hidden block hover:text-blue-500 transition"
-            id="open_sidebar"
+            onClick={()=> setIsVisibleMenu(!isVisibleMenu)}
           >
             <FontAwesomeIcon icon={faBars} />
+          </div>
+          <div className={isVisibleMenu? 'hidden' : 'block'} onClick={()=> setIsVisibleMenu(!isVisibleMenu)}>
+            <MobileMenu/>
           </div>
         </div>
       </nav>
