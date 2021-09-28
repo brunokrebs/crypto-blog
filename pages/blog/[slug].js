@@ -15,6 +15,7 @@ export default function PostPage({
   slug,
   content,
 }) {
+
   return (
     <>
       <Header />
@@ -263,7 +264,7 @@ export default function PostPage({
           <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
 
-            <LastPosts />
+            <LastPosts posts={posts.reverse()}/>
           </div>
         </div>
       </main>
@@ -314,6 +315,7 @@ export async function getStaticProps({ params: { slug } }) {
       frontmatter,
     };
   });
+
   const { data: frontmatter, content } = matter(markdownWithMeta);
   let date = new Date(frontmatter.date);
   date =
