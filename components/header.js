@@ -97,17 +97,17 @@ export default function Header() {
           </div>
         </div>
       </nav> */}
-      <div class="header-2">
-        <nav class="bg-white py-2 md:py-4">
-          <div class="container px-4 mx-auto md:flex md:items-center">
-            <div class="flex justify-between items-center">
+      <div className="header-2">
+        <nav className="bg-white py-2 md:py-4">
+          <div className="container px-4 mx-auto md:flex md:items-center">
+            <div className="flex justify-between items-center">
               <Link href="/">
-                <a class="transition hover:text-blue-500 font-bold text-xl">
+                <a className="transition hover:text-blue-500 font-bold text-xl">
                   Crypto Blog
                 </a>
               </Link>
               <button
-                class="border border-solid border-gray-600 px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden"
+                className="border border-solid border-gray-600 px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden"
                 onClick={() => setIsVisibleMenu(!isVisibleMenu)}
               >
                 <FontAwesomeIcon icon={faBars} />
@@ -115,13 +115,13 @@ export default function Header() {
             </div>
 
             <nav
-              class={`${
+              className={`${
                 isVisibleMenu ? "flex" : "hidden"
               } md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0`}
             >
               <Link href="/">
                 <a
-                  class="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+                  className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
                 >
                   {" "}
                   <span className="mr-2">
@@ -132,7 +132,7 @@ export default function Header() {
               </Link>
               <Link href="/blog/posts">
                 <a
-                  class="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+                  className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
                 >
                   {" "}
                   <span className="mr-2">
@@ -143,7 +143,7 @@ export default function Header() {
               </Link>
               <Link href="/">
                 <a
-                  class="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+                  className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
                 >
                   {" "}
                   <span className="mr-2">
@@ -155,7 +155,7 @@ export default function Header() {
               <Link href="/">
                 <a
                   href="#"
-                  class="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+                  className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
                 >
                   {" "}
                   <span className="mr-2">
