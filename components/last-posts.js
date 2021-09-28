@@ -5,8 +5,8 @@ function renderLastPosts(posts) {
     if (idx > 4) return;
 
     return (
-      <Link href={`/blog/${post.slug}`}>
-      <a  className="flex group" key={idx}>
+      <Link href={`/blog/${post.slug}`}  key={idx}>
+      <a  className="flex group">
         <div className="flex-shrink-0">
           <img
             src={post.frontmatter.banner}

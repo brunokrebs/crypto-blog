@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function BigArticle({ post }) {
   return (
     <div className="rounded-sm overflow-hidden bg-white shadow-sm">
