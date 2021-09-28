@@ -1,8 +1,14 @@
+import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faFacebookF,faTwitter, faInstagram, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import SocialMedias from "../../components/social-medias";
@@ -15,7 +21,6 @@ export default function PostPage({
   slug,
   content,
 }) {
-
   return (
     <>
       <Header />
@@ -131,30 +136,42 @@ export default function PostPage({
                 </p>
 
                 <div className="mt-5 pt-5 border-t border-gray-200 flex gap-2">
-                  <a
-                    href="#"
-                    className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
-                  >
-                      <FontAwesomeIcon icon={faFacebookF} width={20} height={20}/>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
-                  >
-                    <FontAwesomeIcon icon={faTwitter} width={20} height={20}/>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} width={20} height={20}/>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} width={20} height={20}/>
-                  </a>
+                  <Link href="#">
+                    <a className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800">
+                      <FontAwesomeIcon
+                        icon={faFacebookF}
+                        width={20}
+                        height={20}
+                      />
+                    </a>
+                  </Link>
+                  <Link href="#">
+                    <a className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800">
+                      <FontAwesomeIcon
+                        icon={faTwitter}
+                        width={20}
+                        height={20}
+                      />
+                    </a>
+                  </Link>
+                  <Link href="#">
+                    <a className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800">
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        width={20}
+                        height={20}
+                      />
+                    </a>
+                  </Link>
+                  <Link href="#">
+                    <a className="w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800">
+                      <FontAwesomeIcon
+                        icon={faLinkedin}
+                        width={20}
+                        height={20}
+                      />
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -264,7 +281,7 @@ export default function PostPage({
           <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
 
-            <LastPosts posts={posts.reverse()}/>
+            <LastPosts posts={posts.reverse()} />
           </div>
         </div>
       </main>

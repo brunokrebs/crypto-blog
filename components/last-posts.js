@@ -1,9 +1,12 @@
+import Link from "next/link";
+
 function renderLastPosts(posts) {
   return posts.map((post, idx) => {
     if (idx > 4) return;
 
     return (
-      <a href={`/blog/${post.slug}`} className="flex group" key={idx}>
+      <Link href={`/blog/${post.slug}`}>
+      <a  className="flex group" key={idx}>
         <div className="flex-shrink-0">
           <img
             src={post.frontmatter.banner}
@@ -22,6 +25,7 @@ function renderLastPosts(posts) {
           </div>
         </div>
       </a>
+      </Link>
     );
   });
 }
