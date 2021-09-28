@@ -1,8 +1,11 @@
 import Link from "next/link";
 
-function genderArticlesResume(posts) {
+function genderArticlesResume(posts, amount = 4) {
+  if (!amount) {
+    amount = posts.length;
+  }
   return posts.map((post, idx) => {
-    if (idx === 0 || idx > 4) return;
+    if (idx === 0 || idx > amount) return;
     return (
       <div className="rounded-sm bg-white p-4 pb-5 shadow-sm" key={idx}>
         <Link href={`/blog/${post.slug}`}>
@@ -43,10 +46,10 @@ function genderArticlesResume(posts) {
     );
   });
 }
-export default function ArticlesResume({ posts }) {
+export default function ArticlesResume({ posts, amount }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-      {genderArticlesResume(posts)}
+      {genderArticlesResume(posts, amount)}
     </div>
   );
 }

@@ -4,16 +4,15 @@ import {
   faHome,
   faFileAlt,
   faPhone,
-  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function MobileMenu() {
   return (
     <div
-      className="fixed w-full h-full bg-black bg-opacity-25 left-0 top-0 z-10 opacity-0 invisible transition-all duration-500 lg:hidden"
+      className="fixed w-full h-full bg-black bg-opacity-25 left-0 top-0 z-10 opacity-0 transition-all duration-500"
     >
       <div
-        className="fixed top-0 w-72 h-full bg-white shadow-md z-10 flex flex-col transition-all duration-500 -left-80"
+        className="fixed top-0 w-72 h-full bg-white shadow-md z-10 flex flex-col transition-all duration-500"
       >
         <h3 className="text-xl font-semibold text-gray-700 mb-1 font-roboto pl-3 pt-3">
           Menu
