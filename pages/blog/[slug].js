@@ -2,7 +2,6 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import showdown from "showdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -22,7 +21,10 @@ export default function PostPage({
   slug,
   content,
 }) {
-
+  /* const html = marked(content);
+  const htmlDoc = ;
+  console.log(htmlDoc); */
+ 
   return (
     <>
       <Header />
@@ -59,6 +61,11 @@ export default function PostPage({
                   <div
                     className="prose prose-blue"
                     dangerouslySetInnerHTML={{ __html: marked(content) }}
+                    style={{
+                      display:"flex",
+                      flexDirection:"column",
+                      alignItems:"center",
+                    }}
                   ></div>
                 </div>
 
