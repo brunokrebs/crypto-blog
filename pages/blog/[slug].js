@@ -14,19 +14,20 @@ import Footer from "../../components/footer";
 import SocialMedias from "../../components/social-medias";
 import LastPosts from "../../components/last-posts";
 import marked from "marked";
+import TableOfContent from "../../components/table-of-contents";
 
 export default function PostPage({
   frontmatter: { title, date, banner, author },
   posts,
   slug,
   content,
-}) { 
+}) {
   return (
     <>
       <Header />
       <main className="pt-12 bg-gray-100 pb-12">
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
-        <div className="w-2/12 hidden xl:block"></div>
+          <div className="w-2/12 hidden xl:block"></div>
 
           <div className="xl:w-6/12 lg:w-9/12 w-full  xl:ml-6 lg:mr-6">
             <div className="rounded-sm overflow-hidden bg-white shadow-sm">
@@ -53,14 +54,13 @@ export default function PostPage({
                 </div>
 
                 <div className="pt-4 flex justify-center">
-                  
                   <div
                     className="prose prose-blue"
                     dangerouslySetInnerHTML={{ __html: marked(content) }}
                     style={{
-                      display:"flex",
-                      flexDirection:"column",
-                      alignItems:"center",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
                     }}
                   ></div>
                 </div>
@@ -287,7 +287,7 @@ export default function PostPage({
 
           <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
-
+            <TableOfContent content={content}/>
             <LastPosts posts={posts.reverse()} />
           </div>
         </div>
@@ -315,14 +315,17 @@ export async function getStaticProps({ params: { slug } }) {
     path.join("posts", slug + ".md"),
     "utf-8"
   );
+  //Complete atual article information
+
+  const { data: frontmatter, content } = matter(markdownWithMeta);
+  let date = new Date(frontmatter.date);
+  //Complete atual article end
+
   const files = fs.readdirSync(path.join("posts"));
 
-  
   const posts = files.map((filename) => {
-    
     const slug = filename.replace(".md", "");
 
-    
     const markdownWithMeta = fs.readFileSync(
       path.join("posts", filename),
       "utf-8"
@@ -330,28 +333,18 @@ export async function getStaticProps({ params: { slug } }) {
     const { data: frontmatter } = matter(markdownWithMeta);
 
     let date = new Date(frontmatter.date);
+
     date =
       date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 
     frontmatter.date = date;
+
     return {
       slug,
       frontmatter,
     };
   });
-  
-  //Complete article information
-  
-  const { data: frontmatter, content } = matter(markdownWithMeta);
-  console.log(frontmatter.date)
-  /* let date = new Date(frontmatter.date);
-
-  date =
-    date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-
-  frontmatter.date = date; */
-  //Complete article end
-
+  console.log(frontmatter);
   return {
     props: {
       frontmatter,
