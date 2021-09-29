@@ -20,11 +20,7 @@ export default function PostPage({
   posts,
   slug,
   content,
-}) {
-  /* const html = marked(content);
-  const htmlDoc = ;
-  console.log(htmlDoc); */
- 
+}) { 
   return (
     <>
       <Header />
@@ -347,13 +343,13 @@ export async function getStaticProps({ params: { slug } }) {
   //Complete article information
   
   const { data: frontmatter, content } = matter(markdownWithMeta);
-  console.log(frontmatter)
-  let date = new Date(frontmatter.date);
+  console.log(frontmatter.date)
+  /* let date = new Date(frontmatter.date);
 
   date =
     date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 
-  frontmatter.date = date;
+  frontmatter.date = date; */
   //Complete article end
 
   return {
