@@ -1,64 +1,52 @@
 import React from "react";
 import Link from "next/link";
-import marked from "marked";
 
-function generateTopics(content) {
-  const points = content.split("</p>");
-  return points
-    .map((point) => {
-      const startPos = point.indexOf('<h2 id="');
-      const endPos = point.indexOf("</h2>");
-      return point.substring(startPos, endPos).trim();
-    })
-    .filter((i) => {
-      if (i) return i;
-    })
-    .map((i) => {
-      const idStart = i.indexOf('<h2 id="') + 8;
-      const idEnd = i.indexOf(">") - 1;
-      const link = i
-        .substring(idStart, idEnd)
-        .trim()
-        .normalize("NFD")
+function getHeadings(content) {
+  const regex = /<h2>(.*?)<\/h2>/g;
+
+  if (content.match(regex)) {
+    return content.match(regex).map((heading) => {
+      const headingText = heading.replace("<h2>", "").replace("</h2>", "");
+
+      const link = "#" + headingText.replace(/ /g, "-").toLowerCase()
+      .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
-      const titleInit = i.indexOf(">") + 1;
-      const titleEnd = i.length;
-      const title = i.substring(titleInit, titleEnd).trim();
 
       return {
+        text: headingText,
         link,
-        title,
       };
     });
+  }
+
+  return [];
 }
 
-function renderTopics(topics) {
-  return topics.map((topic, idx) => {
-    return (
-      <li key={idx}>
-        <Link href={`#${topic.link}`} >
-          <a className="flex group">
-            <div className="flex-grow pl-3">
-              <h5 className="text-md leading-5 block font-roboto font-semibold  transition group-hover:text-blue-500">
-                {topic.title}
-              </h5>
-            </div>
-          </a>
-        </Link>
-      </li>
-    );
-  });
-}
 
 export default function TOC({ content }) {
-  const topics = generateTopics(marked(content));
-
+  const headings = getHeadings(content);
   return (
     <div className="w-full mt-8 bg-white shadow-sm rounded-sm p-4 ">
       <h3 className="text-xl font-semibold text-gray-700 mb-3 font-roboto">
         Índice
       </h3>
-      <ul>{renderTopics(topics)}</ul>
+      {headings.length > 0 ? (
+        <ol>
+          {headings.map((heading) => (
+            <li key={heading.text}>
+              <Link href={`${heading.link}`}>
+                <a className="flex group">
+                  <div className="flex-grow pl-3">
+                    <h5 className="text-md leading-5 block font-roboto font-semibold  transition group-hover:text-blue-500">
+                      {heading.text}
+                    </h5>
+                  </div>
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ol>
+      ) : null}
     </div>
   );
 }

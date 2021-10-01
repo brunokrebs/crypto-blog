@@ -2,6 +2,9 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { remark } from "remark";
+import remarkToc from "remark-toc";
+import remarkHtml from "remark-html";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -13,8 +16,19 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import SocialMedias from "../../components/social-medias";
 import LastPosts from "../../components/last-posts";
-import marked from "marked";
 import TableOfContent from "../../components/table-of-contents";
+import { MDXProvider } from "@mdx-js/react";
+
+const Heading2 = ({ children = "" }) => {
+  console.log("vim aqui");
+  const idText = children.replace(/ /g, "-").toLowerCase();
+
+  return <h2 id={idText}>{children}</h2>;
+};
+
+const MDXComponents = {
+  h2: Heading2,
+};
 
 export default function PostPage({
   frontmatter: { title, date, banner, author },
@@ -35,9 +49,9 @@ export default function PostPage({
                 <img src={banner} className="w-full h-96 object-cover" />
               </div>
               <div className="p-4 pb-5">
-                <h2 className=" text-center block text-2xl font-semibold text-gray-700 font-roboto">
+                <h1 className=" text-center block text-2xl font-semibold text-gray-700 font-roboto">
                   {title}
-                </h2>
+                </h1>
                 <div className="mt-2 flex space-x-4 justify-center">
                   <div className="flex text-gray-400 text-sm items-center text-center">
                     <span className="mr-2 text-xs">
@@ -53,10 +67,16 @@ export default function PostPage({
                   </div>
                 </div>
 
+                {/* <div className="pt-4 flex justify-center prose prose-blue" >
+                  <MDXProvider components={MDXComponents}>
+                    <div dangerouslySetInnerHTML={{__html:newContent}}></div>
+                  </MDXProvider>
+                </div> */}
+
                 <div className="pt-4 flex justify-center">
                   <div
                     className="prose prose-blue"
-                    dangerouslySetInnerHTML={{ __html: marked(content) }}
+                    dangerouslySetInnerHTML={{ __html: addTitleLinks(content) }}
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -64,83 +84,6 @@ export default function PostPage({
                     }}
                   ></div>
                 </div>
-
-                {/* <p className="text-gray-500 text-sm mt-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis et sunt saepe accusamus eum ex sint est neque
-                  provident tempore, minus laborum repudiandae vitae temporibus
-                  nesciunt, sed enim quo harum a id, alias maiores! Incidunt
-                  iusto minus explicabo itaque iure recusandae
-                </p>
-
-                <p className="bg-green-50 border border-green-500 p-3 text-sm  mt-5">
-                  <span className="text-xl mr-1 text-gray-400">
-                    <i className="fas fa-quote-left"></i>
-                  </span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Doloribus blanditiis earum nam, quisquam magnam aut odio
-                  aliquam inventore quibusdam mollitia! Alias, mollitia eveniet
-                  iure quidem natus quis assumenda consectetur beatae. Lorem,
-                  ipsum dolor quibusdam.
-                  <span className="text-xl ml-1 text-gray-400">
-                    <i className="fas fa-quote-right"></i>
-                  </span>
-                </p>
-
-                <p className="text-gray-500 text-sm mt-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis et sunt saepe accusamus eum ex sint est neque
-                  provident tempore, minus laborum repudiandae vitae temporibus
-                  nesciunt, sed enim quo harum a id, alias maiores! Incidunt
-                  iusto minus explicabo itaque iure recusandae
-                </p>
-
-                <ul className="mt-6 pl-5  space-y-2">
-                  <li className="text-sm">
-                    <span className="mr-1">
-                      <i className="fas fa-angle-right"></i>
-                    </span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis.
-                  </li>
-                  <li className="text-sm">
-                    <span className="mr-1">
-                      <i className="fas fa-angle-right"></i>
-                    </span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis.
-                  </li>
-                  <li className="text-sm">
-                    <span className="mr-1">
-                      <i className="fas fa-angle-right"></i>
-                    </span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis.
-                  </li>
-                  <li className="text-sm">
-                    <span className="mr-1">
-                      <i className="fas fa-angle-right"></i>
-                    </span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis.
-                  </li>
-                </ul>
-
-                <p className="text-gray-500 text-sm mt-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis et sunt saepe accusamus eum ex sint est neque
-                  provident tempore, minus laborum repudiandae vitae temporibus
-                  nesciunt, sed enim quo harum a id, alias maiores! Incidunt
-                  iusto minus explicabo itaque iure recusandae
-                </p>
-
-                <p className="text-gray-500 text-sm mt-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis et sunt saepe accusamus eum ex sint est neque
-                  provident tempore, minus laborum repudiandae vitae temporibus
-                  nesciunt, sed enim quo harum a id, alias maiores! Incidunt
-                  iusto minus explicabo itaque iure recusandae
-                </p> */}
 
                 <div className="mt-5 pt-5 border-t border-gray-200 flex gap-2">
                   <Link href="#">
@@ -233,61 +176,11 @@ export default function PostPage({
                   );
                 })}
             </div>
-
-            {/* for future when adding comments 
-             <div className="p-4 bg-white rounded-sm shadow-sm mt-8">
-              <h4 className="text-base uppercase  font-semibold mb-4 font-roboto">
-                Post a comment
-              </h4>
-              <p className="text-sm text-gray-500 mb-4">12 comments</p>
-
-              <div className="space-y-5">
-                <div className="flex items-start border-b  pb-5 border-gray-200">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <img src="images/avatar.png" className="w-full" />
-                  </div>
-                  <div className="flex-grow pl-4">
-                    <h4 className="text-base  font-roboto">Rasel Ahmed</h4>
-                    <p className="text-xs text-gray-400">
-                      9 Aprile 2021 at 12:34 AM
-                    </p>
-                    <p className="text-sm font-600 mt-2">
-                      Great article. Thanks
-                    </p>
-                    <div className="flex gap-2 mt-2">
-                      <button className="text-gray-500 px-1 text-xs border border-gray-200 rounded-sm shadow-sm hover:bg-blue-500 hover:text-white transition">
-                        Reply
-                      </button>
-                      <button className="text-gray-500 px-1 text-xs border border-gray-200 rounded-sm shadow-sm hover:bg-blue-500 hover:text-white transition">
-                        Delete
-                      </button>
-                    </div>
-                  </div>
-                </div>                
-              </div>
-
-              <form action="#" className="mt-8">
-                <h5 className="text-base  mb-1">Comment:</h5>
-                <textarea
-                  type="text"
-                  className="w-full border border-gray-200 py-3 px-5 text-sm  rounded-sm h-20 focus:outline-none focus:border-gray-400"
-                  placeholder="type your comment"
-                ></textarea>
-                <div className="mt-2">
-                  <butotn
-                    type="submit"
-                    className="text-white py-1 px-3 rounded-sm uppercase text-sm bg-blue-500 border border-blue-500 hover:text-blue-500 hover:bg-transparent transition"
-                  >
-                    Submit
-                  </butotn>
-                </div>
-              </form>
-            </div> */}
           </div>
 
           <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
-            <TableOfContent content={content}/>
+            <TableOfContent content={content} />
             <LastPosts posts={posts.reverse()} />
           </div>
         </div>
@@ -318,7 +211,21 @@ export async function getStaticProps({ params: { slug } }) {
   //Complete atual article information
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
-  let date = new Date(frontmatter.date);
+  const date = new Date(frontmatter.date);
+
+  const day = date.getDay() < 10 ? `0${date.getDay()}` : date.getDay();
+  const month =
+    date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
+  const year = date.getFullYear();
+
+  frontmatter.date = `${day}/${month}/${year}`;
+
+  const parseMdToHTML = await remark()
+    .use(remarkToc)
+    .use(remarkHtml, { sanitize: false, allowDangerousHTML: true })
+    .process(content);
+
+  const postHTML = parseMdToHTML.toString();
   //Complete atual article end
 
   const files = fs.readdirSync(path.join("posts"));
@@ -331,26 +238,48 @@ export async function getStaticProps({ params: { slug } }) {
       "utf-8"
     );
     const { data: frontmatter } = matter(markdownWithMeta);
+    const date = new Date(frontmatter.date);
+    const day = date.getDay() < 10 ? `0${date.getDay()}` : date.getDay();
+    const month =
+      date.getMonth() + 1 < 10
+        ? `0${date.getMonth() + 1}`
+        : date.getMonth() + 1;
+    const year = date.getFullYear();
 
-    let date = new Date(frontmatter.date);
-
-    date =
-      date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-
-    frontmatter.date = date;
-
+    frontmatter.date = `${day}/${month}/${year}`;
     return {
       slug,
       frontmatter,
     };
   });
-  console.log(frontmatter);
+
   return {
     props: {
       frontmatter,
       slug,
-      content,
+      content: postHTML,
       posts,
     },
   };
+}
+
+function addTitleLinks(content) {
+  const regex = /<(.*?)>(.*?)<\/.*?>/g;
+
+  const formatedContent = content.match(regex).map((stringHtml) => {
+    const regex = /<h2>(.*?)<\/h2>/g;
+    if (stringHtml.match(regex)) {
+      const text = stringHtml.replace("<h2>", "").replace("</h2>", "");
+
+      const link = text
+        .replace(/ /g, "-")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+      return `<h2 id=${link}>${text}</h2>`;
+    }
+    return stringHtml;
+  });
+  return formatedContent.join("");
 }
