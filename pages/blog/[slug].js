@@ -63,7 +63,7 @@ export default function PostPage({
                     <span className="mr-2 text-xs">
                       <i className="far fa-clock"></i>
                     </span>
-                    {format(new Date(date),'dd/MM/yyyy')}
+                    {date}
                   </div>
                 </div>
 
@@ -212,8 +212,9 @@ export async function getStaticProps({ params: { slug } }) {
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
 
+  frontmatter.date = new Date(frontmatter.date).toString();
+
   const parseMdToHTML = await remark()
-    .use(remarkToc)
     .use(remarkHtml, { sanitize: false, allowDangerousHTML: true })
     .process(content);
 
@@ -230,6 +231,8 @@ export async function getStaticProps({ params: { slug } }) {
       "utf-8"
     );
     const { data: frontmatter } = matter(markdownWithMeta);
+
+    frontmatter.date = new Date(frontmatter.date).toString();
     
     return {
       slug,

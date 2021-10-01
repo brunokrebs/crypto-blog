@@ -22,7 +22,7 @@ function renderLastPosts(posts) {
               <span className="mr-1 text-xs">
                 <i className="far fa-clock"></i>
               </span>
-              {format(new Date(post.frontmatter.date),'dd/MM/yyyy')}
+              {post.frontmatter.date}
             </div>
           </div>
         </a>
