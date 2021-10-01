@@ -17,7 +17,7 @@ import Footer from "../../components/footer";
 import SocialMedias from "../../components/social-medias";
 import LastPosts from "../../components/last-posts";
 import TableOfContent from "../../components/table-of-contents";
-import { MDXProvider } from "@mdx-js/react";
+import { format } from "date-fns";
 
 const Heading2 = ({ children = "" }) => {
   console.log("vim aqui");
@@ -63,7 +63,7 @@ export default function PostPage({
                     <span className="mr-2 text-xs">
                       <i className="far fa-clock"></i>
                     </span>
-                    {date}
+                    {format(new Date(date),'dd/MM/yyyy')}
                   </div>
                 </div>
 
@@ -211,14 +211,6 @@ export async function getStaticProps({ params: { slug } }) {
   //Complete atual article information
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
-  const date = new Date(frontmatter.date);
-
-  const day = date.getDay() < 10 ? `0${date.getDay()}` : date.getDay();
-  const month =
-    date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
-  const year = date.getFullYear();
-
-  frontmatter.date = `${day}/${month}/${year}`;
 
   const parseMdToHTML = await remark()
     .use(remarkToc)
@@ -238,15 +230,7 @@ export async function getStaticProps({ params: { slug } }) {
       "utf-8"
     );
     const { data: frontmatter } = matter(markdownWithMeta);
-    const date = new Date(frontmatter.date);
-    const day = date.getDay() < 10 ? `0${date.getDay()}` : date.getDay();
-    const month =
-      date.getMonth() + 1 < 10
-        ? `0${date.getMonth() + 1}`
-        : date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    frontmatter.date = `${day}/${month}/${year}`;
+    
     return {
       slug,
       frontmatter,

@@ -1,3 +1,4 @@
+import format from "date-fns/format";
 import Link from "next/link";
 
 function renderLastPosts(posts) {
@@ -21,7 +22,7 @@ function renderLastPosts(posts) {
               <span className="mr-1 text-xs">
                 <i className="far fa-clock"></i>
               </span>
-              {post.frontmatter.date}
+              {format(new Date(post.frontmatter.date),'dd/MM/yyyy')}
             </div>
           </div>
         </a>
