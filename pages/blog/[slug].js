@@ -16,8 +16,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import SocialMedias from "../../components/social-medias";
 import LastPosts from "../../components/last-posts";
-import TableOfContent from "../../components/table-of-contents";
-import { format } from "date-fns";
+import remarkSlug from 'remark-slug';
 
 const Heading2 = ({ children = "" }) => {
   console.log("vim aqui");
@@ -76,7 +75,7 @@ export default function PostPage({
                 <div className="pt-4 flex justify-center">
                   <div
                     className="prose prose-blue"
-                    dangerouslySetInnerHTML={{ __html: addTitleLinks(content) }}
+                    dangerouslySetInnerHTML={{ __html: content }}
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -180,7 +179,6 @@ export default function PostPage({
 
           <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
-            <TableOfContent content={content} />
             <LastPosts posts={posts.reverse()} />
           </div>
         </div>
@@ -215,7 +213,9 @@ export async function getStaticProps({ params: { slug } }) {
   frontmatter.date = new Date(frontmatter.date).toString();
 
   const parseMdToHTML = await remark()
+    .use(remarkToc)
     .use(remarkHtml, { sanitize: false, allowDangerousHTML: true })
+    .use(remarkSlug)
     .process(content);
 
   const postHTML = parseMdToHTML.toString();
@@ -248,25 +248,4 @@ export async function getStaticProps({ params: { slug } }) {
       posts,
     },
   };
-}
-
-function addTitleLinks(content) {
-  const regex = /<(.*?)>(.*?)<\/.*?>/g;
-
-  const formatedContent = content.match(regex).map((stringHtml) => {
-    const regex = /<h2>(.*?)<\/h2>/g;
-    if (stringHtml.match(regex)) {
-      const text = stringHtml.replace("<h2>", "").replace("</h2>", "");
-
-      const link = text
-        .replace(/ /g, "-")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-
-      return `<h2 id=${link}>${text}</h2>`;
-    }
-    return stringHtml;
-  });
-  return formatedContent.join("");
 }
