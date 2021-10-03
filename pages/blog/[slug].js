@@ -212,9 +212,6 @@ export async function getStaticProps({ params: { slug } }) {
     day: "numeric",
   };
   const date = new Date().toLocaleDateString("pt-br", option);
-  console.log('------------');
-  console.log(date);
-  console.log('------------');
 
   const remarkContent = await remark()
     .use(remarkHtml)
