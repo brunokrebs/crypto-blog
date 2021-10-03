@@ -1,4 +1,3 @@
-import format from "date-fns/format";
 import Link from "next/link";
 
 function renderLastPosts(posts) {
@@ -6,7 +5,7 @@ function renderLastPosts(posts) {
     if (idx > 4) return;
 
     return (
-      <Link href={`/blog/${post.slug}`} key={idx}>
+      <Link href={post.slug} key={idx}>
         <a className="flex group">
           <div className="flex-shrink-0">
             <img

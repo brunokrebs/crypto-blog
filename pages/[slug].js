@@ -12,12 +12,12 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
-import SocialMedias from "../../components/social-medias";
-import LastPosts from "../../components/last-posts";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import SocialMedias from "../components/social-medias";
+import LastPosts from "../components/last-posts";
 import remarkSlug from "remark-slug";
-import { getLatestPosts } from "../../util/posts";
+import { getLatestPosts } from "../util/posts";
 
 const Heading2 = ({ children = "" }) => {
   console.log("vim aqui");
@@ -143,7 +143,7 @@ export default function PostPage({
                       key={idx}
                     >
                       <a
-                        href={`/blog/${post.slug}`}
+                        href={post.slug}
                         className="block rounded-md overflow-hidden"
                       >
                         <img
@@ -152,7 +152,7 @@ export default function PostPage({
                         />
                       </a>
                       <div className="mt-3">
-                        <a href={`/blog/${post.slug}`}>
+                        <a href={post.slug}>
                           <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
                             {post.frontmatter.title}
                           </h2>

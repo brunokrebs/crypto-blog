@@ -1,12 +1,10 @@
-import Link from 'next/link';
+import Link from "next/link";
+
 export default function BigArticle({ post }) {
   return (
     <div className="rounded-sm overflow-hidden bg-white shadow-sm">
-      <Link href={`/blog/${post.slug}`}>
-        <a
-          href={`/blog/${post.slug}`}
-          className="block rounded-md overflow-hidden"
-        >
+      <Link href={post.slug}>
+        <a href={post.slug} className="block rounded-md overflow-hidden">
           <img
             src={post.frontmatter.banner}
             className="w-full h-96 object-cover transform hover:scale-110 transition duration-500"
@@ -14,8 +12,8 @@ export default function BigArticle({ post }) {
         </a>
       </Link>
       <div className="p-4 pb-5">
-        <Link href={`/blog/${post.slug}`}>
-          <a href={`/blog/${post.slug}`}>
+        <Link href={post.slug}>
+          <a href={post.slug}>
             <h2 className="block text-2xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
               {post.frontmatter.title}
             </h2>

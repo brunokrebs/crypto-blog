@@ -1,13 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faFileAlt,
-  faPhone,
-  faBars,
-  faTimesCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHome, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 export default function Header() {
@@ -46,36 +40,6 @@ export default function Header() {
                     <FontAwesomeIcon icon={faHome} />
                   </span>
                   Home
-                </a>
-              </Link>
-              <Link href="/blog/posts">
-                <a className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">
-                  {" "}
-                  <span className="mr-2">
-                    <FontAwesomeIcon icon={faFileAlt} />
-                  </span>{" "}
-                  Artigos
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">
-                  {" "}
-                  <span className="mr-2">
-                    <FontAwesomeIcon icon={faFileAlt} />
-                  </span>{" "}
-                  Sobre-nós
-                </a>
-              </Link>
-              <Link href="/">
-                <a
-                  href="#"
-                  className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
-                >
-                  {" "}
-                  <span className="mr-2">
-                    <FontAwesomeIcon icon={faPhone} />
-                  </span>
-                  Contato
                 </a>
               </Link>
             </nav>

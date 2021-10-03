@@ -8,7 +8,7 @@ function genderArticlesResume(posts, amount = 4) {
     if (idx === 0 || idx > amount) return;
     return (
       <div className="rounded-sm bg-white p-4 pb-5 shadow-sm" key={idx}>
-        <Link href={`/blog/${post.slug}`}>
+        <Link href={post.slug}>
           <a className="block rounded-md overflow-hidden">
             <img
               src={post.frontmatter.banner}
@@ -17,8 +17,8 @@ function genderArticlesResume(posts, amount = 4) {
           </a>
         </Link>
         <div className="mt-3">
-          <Link href={`/blog/${post.slug}`}>
-            <a href={`/blog/${post.slug}`}>
+          <Link href={post.slug}>
+            <a href={post.slug}>
               <h2 className="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
                 {post.frontmatter.title}
               </h2>
