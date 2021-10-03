@@ -18,6 +18,7 @@ function getToC(content) {
 
 export default function TableOfContents({ content }) {
   const headings = getToC(content);
+  console.log("headings", headings);
   return (
     <div className="w-full mt-8 bg-white shadow-sm rounded-sm p-4 ">
       <h3 className="text-xl font-semibold text-gray-700 mb-3 font-roboto">
@@ -26,13 +27,11 @@ export default function TableOfContents({ content }) {
       <ol className="list-decimal font-bold pl-5 text-gray-700">
         {headings?.map((heading) => (
           <li key={heading.text} className="mb-2">
-            <Link href={`#${heading.link}`}>
-              <a>
-                <h5 className="text-md leading-5 block font-roboto font-semibold  transition group-hover:text-blue-500">
-                  {heading.text}
-                </h5>
-              </a>
-            </Link>
+            <a href={`#${heading.link}`}>
+              <h5 className="text-md leading-5 block font-roboto font-semibold  transition group-hover:text-blue-500">
+                {heading.text}
+              </h5>
+            </a>
           </li>
         ))}
       </ol>

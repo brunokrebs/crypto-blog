@@ -33,7 +33,7 @@ export default function PostPage({
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
           <div className="w-1/12 hidden xl:block"></div>
 
-          <div className="xl:w-6/12 lg:w-9/12 w-full xl:ml-6 lg:mr-6">
+          <div className="xl:w-6/12 lg:w-8/12 w-full xl:ml-6 lg:mr-6">
             <div className="rounded-sm overflow-hidden bg-white shadow-sm">
               <div className="">
                 <img src={banner} className="w-full h-96 object-cover" />
@@ -153,7 +153,7 @@ export default function PostPage({
             </div>
           </div>
 
-          <div className="lg:w-4/12 w-full mt-8 lg:mt-0">
+          <div className="xl:w-4/12 lg:w-4/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
             <TableOfContents content={content} />
             <LatestPosts posts={posts.reverse()} />
