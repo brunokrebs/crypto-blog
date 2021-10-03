@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import BigArticle from "../components/big-aricle";
+import BigArticle from "../components/big-article";
 import PostsSummaries from "../components/posts-summaries";
 import SocialMedias from "../components/social-medias";
 import LastestPosts from "../components/lastest-posts";
