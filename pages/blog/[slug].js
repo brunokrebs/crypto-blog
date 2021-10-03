@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
-import remarkToc from "remark-toc";
+import { toc } from "mdast-util-toc";
 import remarkHtml from "remark-html";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,7 +16,8 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import SocialMedias from "../../components/social-medias";
 import LastPosts from "../../components/last-posts";
-import remarkSlug from 'remark-slug';
+import remarkSlug from "remark-slug";
+import { getLatestPosts } from "../../util/posts";
 
 const Heading2 = ({ children = "" }) => {
   console.log("vim aqui");
@@ -30,11 +31,13 @@ const MDXComponents = {
 };
 
 export default function PostPage({
-  frontmatter: { title, date, banner, author },
+  frontmatter: { title, banner, author },
+  date,
   posts,
   slug,
   content,
 }) {
+  console.log({ title, date, banner, author });
   return (
     <>
       <Header />
@@ -66,13 +69,7 @@ export default function PostPage({
                   </div>
                 </div>
 
-                {/* <div className="pt-4 flex justify-center prose prose-blue" >
-                  <MDXProvider components={MDXComponents}>
-                    <div dangerouslySetInnerHTML={{__html:newContent}}></div>
-                  </MDXProvider>
-                </div> */}
-
-                <div className="pt-4 flex justify-center">
+                <div id="blog-content" className="pt-4 flex justify-center">
                   <div
                     className="prose prose-blue"
                     dangerouslySetInnerHTML={{ __html: content }}
@@ -123,6 +120,10 @@ export default function PostPage({
                   </Link>
                 </div>
               </div>
+            </div>
+
+            <div>
+              <h2>Conteúdo</h2>
             </div>
 
             <div className="flex bg-white px-3 py-2 justify-between items-center rounded-sm mt-8">
@@ -202,49 +203,37 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("posts", slug + ".md"),
-    "utf-8"
-  );
-  //Complete atual article information
+  const mdFile = fs.readFileSync(`${process.cwd()}/posts/${slug}.md`, "utf-8");
 
-  const { data: frontmatter, content } = matter(markdownWithMeta);
+  const { data: frontmatter, content: markdownContent } = matter(mdFile);
+  const option = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const date = new Date().toLocaleDateString("pt-br", option);
+  console.log('------------');
+  console.log(date);
+  console.log('------------');
 
-  frontmatter.date = new Date(frontmatter.date).toString();
-
-  const parseMdToHTML = await remark()
-    .use(remarkToc)
-    .use(remarkHtml, { sanitize: false, allowDangerousHTML: true })
+  const remarkContent = await remark()
+    .use(remarkHtml)
     .use(remarkSlug)
-    .process(content);
+    .process(markdownContent);
+  const content = remarkContent.toString();
+  const posts = getLatestPosts();
 
-  const postHTML = parseMdToHTML.toString();
-  //Complete atual article end
+  const parsedContent = await remark().parse(markdownContent);
+  const table = toc(parsedContent);
 
-  const files = fs.readdirSync(path.join("posts"));
-
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-
-    const markdownWithMeta = fs.readFileSync(
-      path.join("posts", filename),
-      "utf-8"
-    );
-    const { data: frontmatter } = matter(markdownWithMeta);
-
-    frontmatter.date = new Date(frontmatter.date).toString();
-    
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+  console.log(table);
 
   return {
     props: {
       frontmatter,
+      date,
       slug,
-      content: postHTML,
+      content,
       posts,
     },
   };

@@ -8,11 +8,11 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Crypto Blog",
-            "runtimeExecutable": "yarn",
+            "runtimeExecutable": "npm",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "runtimeArgs": ["dev"],
+            "runtimeArgs": ["run", "dev"],
             "port": 3000
         }
     ]

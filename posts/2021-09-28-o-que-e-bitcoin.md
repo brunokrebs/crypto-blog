@@ -10,8 +10,6 @@ author:
 
 # O que é o Bitcoin e por que ele é tão importante?
 
-## Table of Contents
-
 Você pode até ter ouvido falar, mas você realmente sabe o que é o Bitcoin? Indo além da explicação óbvia, o Bitcoin é um divisor de águas que influência e influenciará a economia durante longos anos.
 
 Isso acontece porque essa moeda digital resolve problemas até então crônicos na economia mundial e no mercado financeiro como um todo. Ainda assim, poucos
