@@ -1,7 +1,7 @@
 ---
 title: "Frida Kahlo e suas Principais Obras"
 description: "Mesmo seu trabalho tendo ficado de lado até 1970, Frida Kahlo foi uma das maiores pintoras latino-americanas."
-date: 2019-11-19 12:00:00
+date: !!timestamp "2019-11-19 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/frida-kahlo-e-suas-principais-obras/frida-kahlo-e-suas-principais-obras-banner_coqCZktSD.jpg"
 author:
   name: "Deise Dilkin"

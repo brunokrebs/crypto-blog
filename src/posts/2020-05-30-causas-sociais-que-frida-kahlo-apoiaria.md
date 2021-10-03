@@ -1,7 +1,7 @@
 ---
 title: "Causas Sociais que Frida Kahlo apoiaria"
 description: "Frida Kahlo foi uma mulher brava que muito lutou por seus ideais. Qual seriam as causas sociais que ela apoiaria hoje em dia?"
-date: 2020-05-29 09:00:00
+date: !!timestamp "2020-05-29 09:00:00"
 banner: "https://ik.imagekit.io/fridakahlo//causas-sociais-frida_05GUU4lg5.jpg"
 author:
   name: "Deise Dilkin"

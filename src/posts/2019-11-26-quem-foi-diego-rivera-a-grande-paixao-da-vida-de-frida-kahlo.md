@@ -1,7 +1,7 @@
 ---
 title: "Quem foi Diego Rivera, a Grande Paixão da Vida de Frida Kahlo"
 description: "Diego Rivera, atualmente mais conhecido como o marido de Frida, foi um artista plástico muito famoso. Conheça mais sobre ele."
-date: 2019-11-26 12:00:00
+date: !!timestamp "2019-11-26 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-11-26-quem-foi-diego-rivera-a-grande-paixa_o-da-vida-de-frida-kahlo/frida-kahlo-frieda-and-diego-rivera_Q7_O2F385.jpg"
 author:
   name: "Deise Dilkin"

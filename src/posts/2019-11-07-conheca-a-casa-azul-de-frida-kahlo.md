@@ -1,7 +1,7 @@
 ---
 title: "Conheça a Casa Azul de Frida Kahlo"
 description: "Conheça mais sobre a famosa casa onde Frida Kahlo nasceu, viveu grande parte de sua vida e morreu."
-date: 2019-11-07 12:00:00
+date: !!timestamp "2019-11-07 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/conheca-a-casa-azul-de-frida-kahlo/conheca-a-casa-azul-da-frida-kahlo-banner-and-facebook_Y6huZTw9b.jpeg"
 author:
   name: "Deise Dilkin"

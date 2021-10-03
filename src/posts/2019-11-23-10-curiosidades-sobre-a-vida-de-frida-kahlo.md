@@ -1,7 +1,7 @@
 ---
 title: "10 Curiosidades Sobre a Vida de Frida Kahlo"
 description: "Frida Kahlo é conhecida por sua monocelha e suas obras. Mas a sua vida conturbada também contém peculiaridades intrigantes."
-date: 2019-11-23 12:00:00
+date: !!timestamp "2019-11-23 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/10-curiosidades-sobre-a-vida-de-frida-kahlo/10-curiosidades-sobre-a-vida-de-frida-kahlo_ChIixtkrx.jpg"
 author:
   name: "Deise Dilkin"

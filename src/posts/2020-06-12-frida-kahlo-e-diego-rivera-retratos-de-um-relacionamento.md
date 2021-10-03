@@ -1,7 +1,7 @@
 ---
 title: "Frida Kahlo e Diego Rivera - retratos de um relacionamento"
 description: "Pra as pessoas que não conviveram direta e indiretamente com Frida e Diego, fica difícil de saber e entender o quão apaixonados eles foram um pelo outro."
-date: 2020-06-12 09:00:00
+date: !!timestamp "2020-06-12 09:00:00"
 banner: "https://ik.imagekit.io/fridakahlo//idasevindas_BRM4tcXf6.jpg"
 author:
   name: "Deise Dilkin"

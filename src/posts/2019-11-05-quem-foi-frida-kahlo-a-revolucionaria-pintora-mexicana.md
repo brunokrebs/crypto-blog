@@ -1,7 +1,7 @@
 ---
 title: "Quem foi Frida Kahlo?"
 description: "Você sabia que Frida sofreu acidentes, internações, abortos e que teve uma relação amorosa tumultuada?"
-date: 2019-11-05 12:00:00
+date: !!timestamp "2019-11-05 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana-banner_APPFmiTHb.jpg"
 author:
   name: "Deise Dilkin"

@@ -1,7 +1,7 @@
 ---
 title: "Os outros amores da vida de Frida Kahlo"
 description: "Frida e Diego ficaram juntos por quase 25 anos. Porém, seu relacionamento foi recheado de casos extraconjugais."
-date: 2019-11-14 12:00:00
+date: !!timestamp "2019-11-14 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/os-outros-amores-da-vida-de-frida-kahlo/os-outros-amores-da-vida-de-frida-kahlo-banner_XVwE5pxtY.jpg"
 author:
   name: "Deise Dilkin"

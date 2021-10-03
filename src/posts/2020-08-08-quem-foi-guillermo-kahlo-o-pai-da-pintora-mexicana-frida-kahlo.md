@@ -1,7 +1,7 @@
 ---
 title: "Quem foi Guillermo Kahlo, o pai da pintora mexicana Frida Kahlo"
 description: "Guillermo Kahlo, além de ser pai da Frida, foi um extraordinário fotógrafo."
-date: 2020-08-08 09:00:00
+date: !!timestamp "2020-08-08 09:00:00"
 banner: "https://ik.imagekit.io/fridakahlo//Guilhermo-Kahlo_TkeEBvr47.jpg"
 author:
   name: "Deise Dilkin"

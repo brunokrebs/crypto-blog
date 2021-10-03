@@ -1,7 +1,7 @@
 ---
 title: "O que é o Bitcoin e por que ele é tão importante?"
 description: "Saiba o que é o Bitcoin e entenda definitivamente o porquê esse cripto ativo ser um divisor de águas no mercado financeiro."
-date: 2021-09-28 12:00:00
+date: !!timestamp "2021-09-28 12:00:00"
 banner: "https://cdn.pixabay.com/photo/2017/01/25/12/31/bitcoin-2007769_960_720.jpg"
 author:
   name: "Bruno Krebs"

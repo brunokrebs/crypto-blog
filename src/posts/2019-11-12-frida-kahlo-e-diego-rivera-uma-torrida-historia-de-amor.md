@@ -1,7 +1,7 @@
 ---
 title: "Frida Kahlo e Diego Rivera, uma tórrida história de amor"
 description: "Frida e Diego tiveram um apaixonado e também conturbado relacionamento. Conheça a famosa história de amor da artista mexicana."
-date: 2019-11-12 12:00:00
+date: !!timestamp "2019-11-12 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/frida-kahlo-e-diego-rivera-uma-torrida-historia-de-amor/frida-kahlo-e-diego-rivera-banner-and-facebook_ECUh4lWQG.jpg"
 author:
   name: "Deise Dilkin"

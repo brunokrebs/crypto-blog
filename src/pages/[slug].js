@@ -19,17 +19,6 @@ import remarkSlug from "remark-slug";
 import { getLatestPosts } from "../util/posts";
 import TableOfContents from "../components/table-of-contents";
 
-const Heading2 = ({ children = "" }) => {
-  console.log("vim aqui");
-  const idText = children.replace(/ /g, "-").toLowerCase();
-
-  return <h2 id={idText}>{children}</h2>;
-};
-
-const MDXComponents = {
-  h2: Heading2,
-};
-
 export default function PostPage({
   frontmatter: { title, banner, author },
   date,
@@ -197,13 +186,15 @@ export async function getStaticProps({ params: { slug } }) {
     "utf-8"
   );
 
+  matter.clearCache();
+
   const { data: frontmatter, content: markdownContent } = matter(mdFile);
   const option = {
     year: "numeric",
     month: "long",
     day: "numeric",
   };
-  const date = new Date().toLocaleDateString("pt-br", option);
+  const date = frontmatter.date.toLocaleDateString("pt-br", option);
 
   const remarkContent = await remark()
     .use(remarkHtml)

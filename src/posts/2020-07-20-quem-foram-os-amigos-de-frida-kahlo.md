@@ -1,7 +1,7 @@
 ---
 title: "Quem Foram os Amigos de Frida Kahlo"
 description: "Frida foi uma artista singular e amada por todos que tiveram a oportunidade de conhecê-la de perto. Não por acaso, fez muitos amigos durante a vida. Conheça mais sobre os amigos da artista."
-date: 2020-07-20 09:00:00
+date: !!timestamp "2020-07-20 09:00:00"
 banner: "https://ik.imagekit.io/fridakahlo//amigos-frida_SebyrJ48v.jpg"
 author:
   name: "Deise Dilkin"

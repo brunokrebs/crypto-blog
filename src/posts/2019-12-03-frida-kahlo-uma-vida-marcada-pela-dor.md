@@ -1,7 +1,7 @@
 ---
 title: "Frida Kahlo: uma Vida Marcada pela Dor"
 description: "A artista Frida Kahlo teve uma vida marcada por tragédias e dor desde sua infância, até a sua morte em 1954. Descubra pelo o que ela passou."
-date: 2019-12-03 12:00:00
+date: !!timestamp "2019-12-03 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-12-03-frida-kahlo-uma-vida-marcada-pela-dor/frida-kahlo-uma-vida-marcada-pela-dor_ByFGWCs16.png"
 author:
   name: "Deise Dilkin"

@@ -1,7 +1,7 @@
 ---
 title: "A Influência da Pintora Mexicana Atualmente"
 description: "Veja como, mesmo 65 anos após sua morte, a pintora mexicana Frida Kahlo continua a influenciar a cultura pop."
-date: 2019-11-28 12:00:00
+date: !!timestamp "2019-11-28 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-11-28-a-influencia-da-pintora-mexicana-atualmente/a-influencia-da-pintora-mexicana-atualmente_3VJ-TIpfK.jpeg"
 author:
   name: "Deise Dilkin"

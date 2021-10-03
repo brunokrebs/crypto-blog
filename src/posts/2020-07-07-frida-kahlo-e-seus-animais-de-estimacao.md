@@ -1,7 +1,7 @@
 ---
 title: "Frida Kahlo e seus animais de estimação"
 description: "Apesar de pouco se falar no assunto, Frida Kahlo era apaixonada por animais. Tanto é que teve diferentes animais de estimação e também os retratou em diversas obras."
-date: 2020-07-07 09:00:00
+date: !!timestamp "2020-07-07 09:00:00"
 banner: "https://ik.imagekit.io/fridakahlo//frida-kahlo-e-seus-animais-de-estimacao_T6Kvljz4p.jpg"
 author:
   name: "Deise Dilkin"

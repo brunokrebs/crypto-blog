@@ -1,7 +1,7 @@
 ---
 title: "Conheça a Casa Onde Morou Frida Kahlo Através de um Tour Virtual"
 description: "Você já pensou em fazer uma visita na casa em que Frida Kahlo nasceu e morou grande parte de sua vida? Você pode, e não precisa ir até o México."
-date: 2020-05-17 09:00:00
+date: !!timestamp "2020-05-17 09:00:00"
 banner: "https://ik.imagekit.io/fridakahlo//casa-azul-tourvirtual_Sk4frFCut.jpg"
 author:
   name: "Deise Dilkin"

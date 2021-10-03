@@ -1,7 +1,7 @@
 ---
 title: "Mamacita Linda: Cartas entre Frida Kahlo e sua mãe"
 description: "Frida Kahlo, assim que chegou aos Estados Unidos, começou a escrever cartas expressando a saudade que sentia em relação à família."
-date: 2020-05-09 12:00:00
+date: !!timestamp "2020-05-09 12:00:00"
 banner: "https://ik.imagekit.io/fridakahlo/cartas_vIoXOdzbw.jpg"
 author:
   name: "Agnes Sanches"
