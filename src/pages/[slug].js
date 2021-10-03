@@ -14,7 +14,7 @@ import {
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SocialMedias from "../components/social-medias";
-import LastPosts from "../components/last-posts";
+import LatestPosts from "../components/lastest-posts";
 import remarkSlug from "remark-slug";
 import { getLatestPosts } from "../util/posts";
 
@@ -179,7 +179,7 @@ export default function PostPage({
 
           <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
-            <LastPosts posts={posts.reverse()} />
+            <LatestPosts posts={posts.reverse()} />
           </div>
         </div>
       </main>
