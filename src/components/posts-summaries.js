@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatDate } from "../util/dates";
 
 const PostSummary = (posts) =>
   posts.map((post, idx) => {

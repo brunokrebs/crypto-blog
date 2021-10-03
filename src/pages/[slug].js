@@ -2,7 +2,6 @@ import Link from "next/link";
 import fs from "fs";
 import matter from "gray-matter";
 import { remark } from "remark";
-import { toc } from "mdast-util-toc";
 import remarkHtml from "remark-html";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,11 +16,11 @@ import SocialMedias from "../components/social-medias";
 import LatestPosts from "../components/lastest-posts";
 import remarkSlug from "remark-slug";
 import { getLatestPosts } from "../util/posts";
+import { formatDate } from "../util/dates";
 import TableOfContents from "../components/table-of-contents";
 
 export default function PostPage({
-  frontmatter: { title, banner, author },
-  date,
+  frontmatter: { title, date, banner, author },
   posts,
   slug,
   content,
@@ -189,12 +188,7 @@ export async function getStaticProps({ params: { slug } }) {
   matter.clearCache();
 
   const { data: frontmatter, content: markdownContent } = matter(mdFile);
-  const option = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-  const date = frontmatter.date.toLocaleDateString("pt-br", option);
+  frontmatter.date = formatDate(frontmatter.date);
 
   const remarkContent = await remark()
     .use(remarkHtml)
@@ -203,15 +197,9 @@ export async function getStaticProps({ params: { slug } }) {
   const content = remarkContent.toString();
   const posts = getLatestPosts();
 
-  const parsedContent = await remark().parse(markdownContent);
-  const table = toc(parsedContent);
-
-  console.log(table);
-
   return {
     props: {
       frontmatter,
-      date,
       slug,
       content,
       posts,

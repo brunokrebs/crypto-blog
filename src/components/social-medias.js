@@ -6,6 +6,7 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+
 export default function SocialMedias() {
   return (
     <div className="w-full bg-white shadow-sm rounded-sm p-4 ">

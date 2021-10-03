@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatDate } from "../util/dates";
 
 export default function BigArticle({ post }) {
   return (
