@@ -42,7 +42,7 @@ const PostSummary = (posts) =>
     );
   });
 
-export default function ArticlesResume({ posts, amount }) {
+export default function PostsSummaries({ posts, amount }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
       {PostSummary(posts, amount)}

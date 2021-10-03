@@ -3,9 +3,9 @@ import matter from "gray-matter";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import BigArticle from "../components/big-aricle";
-import ArticlesResume from "../components/articles-remuse";
+import PostsSummaries from "../components/posts-summaries";
 import SocialMedias from "../components/social-medias";
-import LastPosts from "../components/last-posts";
+import LastestPosts from "../components/lastest-posts";
 
 export default function Home({ posts }) {
   return (
@@ -14,18 +14,16 @@ export default function Home({ posts }) {
 
       <main className="pt-12 bg-gray-100 pb-12">
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
-          <div className="w-2/12 hidden xl:block"></div>
-
           <div className="xl:w-6/12 lg:w-9/12 w-full  xl:ml-6 lg:mr-6">
             <BigArticle post={posts[0]} />
 
-            <ArticlesResume posts={posts} />
+            <PostsSummaries posts={posts} />
           </div>
 
           <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
 
-            <LastPosts posts={posts} />
+            <LastestPosts posts={posts} />
           </div>
         </div>
       </main>

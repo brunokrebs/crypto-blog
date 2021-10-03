@@ -17,6 +17,7 @@ import SocialMedias from "../components/social-medias";
 import LatestPosts from "../components/lastest-posts";
 import remarkSlug from "remark-slug";
 import { getLatestPosts } from "../util/posts";
+import TableOfContents from "../components/table-of-contents";
 
 const Heading2 = ({ children = "" }) => {
   console.log("vim aqui");
@@ -44,7 +45,7 @@ export default function PostPage({
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
           <div className="w-2/12 hidden xl:block"></div>
 
-          <div className="xl:w-6/12 lg:w-9/12 w-full  xl:ml-6 lg:mr-6">
+          <div className="xl:w-6/12 lg:w-9/12 w-full xl:ml-6 lg:mr-6">
             <div className="rounded-sm overflow-hidden bg-white shadow-sm">
               <div className="">
                 <img src={banner} className="w-full h-96 object-cover" />
@@ -122,63 +123,55 @@ export default function PostPage({
             </div>
 
             <div>
-              <h2>Conteúdo</h2>
-            </div>
-
-            <div className="flex bg-white px-3 py-2 justify-between items-center rounded-sm mt-8">
-              <h5 className="text-base uppercase font-semibold font-roboto">
-                Outros Artigos
-              </h5>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4">
-              {posts
-                .filter((post) => post.slug !== slug)
-                .map((post, idx) => {
-                  if (idx > 2) return;
-                  return (
-                    <div
-                      className="rounded-sm bg-white p-3 pb-5 shadow-sm"
-                      key={idx}
-                    >
-                      <a
-                        href={post.slug}
-                        className="block rounded-md overflow-hidden"
-                      >
-                        <img
-                          src={post.frontmatter.banner}
-                          className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
-                        />
-                      </a>
-                      <div className="mt-3">
-                        <a href={post.slug}>
-                          <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                            {post.frontmatter.title}
-                          </h2>
-                        </a>
-                        <div className="mt-2 flex space-x-3">
-                          <div className="flex text-gray-400 text-xs items-center">
-                            <span className="mr-1 text-xs">
-                              <i className="far fa-user"></i>
-                            </span>
-                            {post.frontmatter.author.name}
-                          </div>
-                          <div className="flex text-gray-400 text-xs items-center">
-                            <span className="mr-1 text-xs">
-                              <i className="far fa-clock"></i>
-                            </span>
-                            {post.frontmatter.date}
+              <div className="bg-white px-3 py-2 justify-between items-center rounded-sm mt-8">
+                <h5 className="text-base uppercase font-semibold font-roboto display-block">
+                  Outros Artigos
+                </h5>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4">
+                  {posts
+                    .filter((post) => post.slug !== slug)
+                    .map((post, idx) => {
+                      if (idx > 2) return;
+                      return (
+                        <div
+                          className="rounded-sm bg-white p-3 pb-5 shadow-sm"
+                          key={idx}
+                        >
+                          <a
+                            href={post.slug}
+                            className="block rounded-md overflow-hidden"
+                          >
+                            <img
+                              src={post.frontmatter.banner}
+                              className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
+                            />
+                          </a>
+                          <div className="mt-3">
+                            <a href={post.slug}>
+                              <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
+                                {post.frontmatter.title}
+                              </h2>
+                            </a>
+                            <div className="mt-2 flex space-x-3">
+                              <div className="flex text-gray-400 text-xs items-center">
+                                <span className="mr-1 text-xs">
+                                  <i className="far fa-clock"></i>
+                                </span>
+                                {post.frontmatter.date}
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  );
-                })}
+                      );
+                    })}
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
+            <TableOfContents content={content} />
             <LatestPosts posts={posts.reverse()} />
           </div>
         </div>
@@ -202,7 +195,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const mdFile = fs.readFileSync(`${process.cwd()}/src/posts/${slug}.md`, "utf-8");
+  const mdFile = fs.readFileSync(
+    `${process.cwd()}/src/posts/${slug}.md`,
+    "utf-8"
+  );
 
   const { data: frontmatter, content: markdownContent } = matter(mdFile);
   const option = {
