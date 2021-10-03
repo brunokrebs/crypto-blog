@@ -1,6 +1,5 @@
 import Link from "next/link";
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import { toc } from "mdast-util-toc";
@@ -190,7 +189,7 @@ export default function PostPage({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("posts"));
+  const files = fs.readdirSync(`${process.cwd()}/src/posts/`);
 
   const paths = files.map((filename) => ({
     params: { slug: filename.replace(".md", "") },
@@ -203,7 +202,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const mdFile = fs.readFileSync(`${process.cwd()}/posts/${slug}.md`, "utf-8");
+  const mdFile = fs.readFileSync(`${process.cwd()}/src/posts/${slug}.md`, "utf-8");
 
   const { data: frontmatter, content: markdownContent } = matter(mdFile);
   const option = {
