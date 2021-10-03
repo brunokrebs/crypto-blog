@@ -6,6 +6,7 @@ import BigArticle from "../components/big-article";
 import PostsSummaries from "../components/posts-summaries";
 import SocialMedias from "../components/social-medias";
 import LastestPosts from "../components/lastest-posts";
+import { formatDate } from "../util/dates";
 
 export default function Home({ posts }) {
   return (
@@ -46,13 +47,9 @@ export async function getStaticProps() {
       `${process.cwd()}/src/posts/${filename}`,
       "utf-8"
     );
+    matter.clearCache();
     const { data: frontmatter } = matter(markdownWithMeta);
-
-    let date = new Date(frontmatter.date);
-    date =
-      date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-
-    frontmatter.date = date;
+    frontmatter.date = formatDate(frontmatter.date);
     return {
       slug,
       frontmatter,
