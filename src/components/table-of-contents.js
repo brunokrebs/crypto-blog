@@ -21,7 +21,7 @@ export default function TableOfContents({ content }) {
   return (
     <div className="w-full mt-8 bg-white shadow-sm rounded-sm p-4 ">
       <h3 className="text-xl font-semibold text-gray-700 mb-3 font-roboto">
-        Índice
+        Conteúdo do Artigo
       </h3>
       <ol className="list-decimal font-bold pl-5 text-gray-700">
         {headings?.map((heading) => (

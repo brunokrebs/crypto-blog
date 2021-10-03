@@ -37,13 +37,12 @@ export default function PostPage({
   slug,
   content,
 }) {
-  console.log({ title, date, banner, author });
   return (
     <>
       <Header />
       <main className="pt-12 bg-gray-100 pb-12">
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
-          <div className="w-2/12 hidden xl:block"></div>
+          <div className="w-1/12 hidden xl:block"></div>
 
           <div className="xl:w-6/12 lg:w-9/12 w-full xl:ml-6 lg:mr-6">
             <div className="rounded-sm overflow-hidden bg-white shadow-sm">
@@ -123,57 +122,55 @@ export default function PostPage({
             </div>
 
             <div>
-              <div className="bg-white px-3 py-2 justify-between items-center rounded-sm mt-8">
-                <h5 className="text-base uppercase font-semibold font-roboto display-block">
-                  Outros Artigos
-                </h5>
+              <div className="bg-white px-3 py-2 justify-between items-center rounded-sm mt-8 shadow-sm">
+                <h2 className="text-base font-semibold font-roboto display-block my-2 text-gray-700">
+                  Continue Lendo
+                </h2>
+                <hr />
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4">
                   {posts
                     .filter((post) => post.slug !== slug)
-                    .map((post, idx) => {
-                      if (idx > 2) return;
-                      return (
-                        <div
-                          className="rounded-sm bg-white p-3 pb-5 shadow-sm"
-                          key={idx}
+                    .slice(0, 3)
+                    .map((post, idx) => (
+                      <div className="rounded-sm bg-white p-3 pb-5" key={idx}>
+                        <a
+                          href={post.slug}
+                          className="block rounded-md overflow-hidden"
                         >
-                          <a
-                            href={post.slug}
-                            className="block rounded-md overflow-hidden"
-                          >
-                            <img
-                              src={post.frontmatter.banner}
-                              className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
-                            />
+                          <img
+                            src={post.frontmatter.banner}
+                            className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
+                          />
+                        </a>
+                        <div className="mt-3">
+                          <a href={post.slug}>
+                            <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
+                              {post.frontmatter.title}
+                            </h2>
                           </a>
-                          <div className="mt-3">
-                            <a href={post.slug}>
-                              <h2 className="block text-base font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                                {post.frontmatter.title}
-                              </h2>
-                            </a>
-                            <div className="mt-2 flex space-x-3">
-                              <div className="flex text-gray-400 text-xs items-center">
-                                <span className="mr-1 text-xs">
-                                  <i className="far fa-clock"></i>
-                                </span>
-                                {post.frontmatter.date}
-                              </div>
+                          <div className="mt-2 flex space-x-3">
+                            <div className="flex text-gray-400 text-xs items-center">
+                              <span className="mr-1 text-xs">
+                                <i className="far fa-clock"></i>
+                              </span>
+                              {post.frontmatter.date}
                             </div>
                           </div>
                         </div>
-                      );
-                    })}
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="lg:w-3/12 w-full mt-8 lg:mt-0">
+          <div className="lg:w-4/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
             <TableOfContents content={content} />
             <LatestPosts posts={posts.reverse()} />
           </div>
+
+          <div className="w-1/12 hidden xl:block"></div>
         </div>
       </main>
       <Footer />

@@ -39,7 +39,7 @@ export default function Header() {
                   <span className="mr-2">
                     <FontAwesomeIcon icon={faHome} />
                   </span>
-                  Home
+                  Início
                 </a>
               </Link>
             </nav>
