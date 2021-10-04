@@ -1,14 +1,18 @@
-import Link from "next/link";
-import { formatDate } from "../util/dates";
+import Link from 'next/link'
+import Image from 'next/image'
+import { FC } from 'react'
+import { Post } from '../util/posts'
 
-export default function BigArticle({ post }) {
+export const BigArticle: FC<{ post: Post }> = ({ post }) => {
   return (
     <div className="rounded-sm overflow-hidden bg-white shadow-sm">
       <Link href={post.slug}>
         <a href={post.slug} className="block rounded-md overflow-hidden">
-          <img
+          <Image
             src={post.frontmatter.banner}
-            className="w-full h-96 object-cover transform hover:scale-110 transition duration-500"
+            alt={post.frontmatter.title}
+            width="100%"
+            height="24rem"
           />
         </a>
       </Link>
@@ -39,5 +43,5 @@ export default function BigArticle({ post }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

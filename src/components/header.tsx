@@ -1,11 +1,11 @@
-import Head from "next/head";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import Head from 'next/head'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faBars } from '@fortawesome/free-solid-svg-icons'
+import { FC, useState } from 'react'
 
-export default function Header() {
-  const [isVisibleMenu, setIsVisibleMenu] = useState(false);
+export const Header: FC = () => {
+  const [isVisibleMenu, setIsVisibleMenu] = useState(false)
   return (
     <>
       <Head>
@@ -30,12 +30,12 @@ export default function Header() {
 
             <nav
               className={`${
-                isVisibleMenu ? "flex" : "hidden"
+                isVisibleMenu ? 'flex' : 'hidden'
               } md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0`}
             >
               <Link href="/">
                 <a className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">
-                  {" "}
+                  {' '}
                   <span className="mr-2">
                     <FontAwesomeIcon icon={faHome} />
                   </span>
@@ -47,5 +47,5 @@ export default function Header() {
         </nav>
       </div>
     </>
-  );
+  )
 }

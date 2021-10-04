@@ -1,12 +1,14 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
-import BigArticle from "../components/big-article";
-import PostsSummaries from "../components/posts-summaries";
-import SocialMedias from "../components/social-medias";
-import LastestPosts from "../components/lastest-posts";
-import { getPosts } from "../util/posts";
+import { GetStaticProps } from 'next'
+import { Header } from '../components/header'
+import { Footer } from '../components/footer'
+import { BigArticle } from '../components/big-article'
+import { PostsSummaries } from '../components/posts-summaries'
+import { SocialMedias } from '../components/social-medias'
+import { LatestPosts } from '../components/latest-posts'
+import { getPosts, Post } from '../util/posts'
+import { FC } from 'react'
 
-export default function Home({ posts }) {
+const Home: FC<{ posts: Post[] }> = ({ posts }) => {
   return (
     <div>
       <Header />
@@ -24,7 +26,7 @@ export default function Home({ posts }) {
           <div className="xl:w-4/12 lg:w-4/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
 
-            <LastestPosts posts={posts} />
+            <LatestPosts posts={posts} />
           </div>
 
           <div className="w-1/12 hidden xl:block"></div>
@@ -32,14 +34,16 @@ export default function Home({ posts }) {
       </main>
       <Footer />
     </div>
-  );
+  )
 }
 
-export async function getStaticProps() {
-  const posts = getPosts();
+export default Home
+
+export const getStaticProps: GetStaticProps = () => {
+  const posts = getPosts()
   return {
     props: {
       posts: posts,
     },
-  };
+  }
 }

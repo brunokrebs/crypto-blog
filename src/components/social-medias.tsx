@@ -1,13 +1,14 @@
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FC } from 'react'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookF,
   faTwitter,
   faInstagram,
   faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons'
 
-export default function SocialMedias() {
+export const SocialMedias: FC = () => {
   return (
     <div className="w-full bg-white shadow-sm rounded-sm p-4 ">
       <h3 className="text-xl font-semibold text-gray-700 mb-3 font-roboto">
@@ -37,5 +38,5 @@ export default function SocialMedias() {
         </Link>
       </div>
     </div>
-  );
+  )
 }

@@ -1,25 +1,40 @@
-import Link from "next/link";
-import fs from "fs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FC } from 'react'
+import { GetStaticProps, GetStaticPaths } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
+import fs from 'fs'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookF,
   faTwitter,
   faInstagram,
   faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import SocialMedias from "../components/social-medias";
-import LatestPosts from "../components/lastest-posts";
-import { getPosts, getBySlug } from "../util/posts";
-import TableOfContents from "../components/table-of-contents";
+} from '@fortawesome/free-brands-svg-icons'
+import { Header } from '../components/header'
+import { Footer } from '../components/footer'
+import { SocialMedias } from '../components/social-medias'
+import { LatestPosts } from '../components/latest-posts'
+import { getPosts, getBySlug, Post } from '../util/posts'
+import { TableOfContents } from '../components/table-of-contents'
 
-export default function PostPage({
+interface PostPage {
+  frontmatter: {
+    title: string
+    date: string
+    banner: string
+    author: { name: string }
+  }
+  posts: Post[]
+  slug: string
+  content: string
+}
+
+const PostPage: FC<PostPage> = ({
   frontmatter: { title, date, banner, author },
   posts,
   slug,
   content,
-}) {
+}) => {
   return (
     <>
       <Header />
@@ -29,8 +44,8 @@ export default function PostPage({
 
           <div className="xl:w-6/12 lg:w-8/12 w-full xl:ml-6 lg:mr-6">
             <div className="rounded-sm overflow-hidden bg-white shadow-sm">
-              <div className="">
-                <img src={banner} className="w-full h-96 object-cover" />
+              <div>
+                <Image src={banner} alt={title} width="100%" height="24rem" />
               </div>
               <div className="p-4 pb-5">
                 <h1 className=" text-center block text-2xl font-semibold text-gray-700 font-roboto">
@@ -56,9 +71,9 @@ export default function PostPage({
                     className="prose prose-blue"
                     dangerouslySetInnerHTML={{ __html: content }}
                     style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
                     }}
                   ></div>
                 </div>
@@ -120,9 +135,11 @@ export default function PostPage({
                           href={post.slug}
                           className="block rounded-md overflow-hidden"
                         >
-                          <img
+                          <Image
                             src={post.frontmatter.banner}
-                            className="w-full h-40 object-cover transform hover:scale-110 transition duration-500"
+                            alt={post.frontmatter.title}
+                            width="100%"
+                            height="6rem"
                           />
                         </a>
                         <div className="mt-3">
@@ -158,30 +175,32 @@ export default function PostPage({
       </main>
       <Footer />
     </>
-  );
+  )
 }
 
-export async function getStaticPaths() {
-  const files = fs.readdirSync(`${process.cwd()}/src/posts/`);
+export default PostPage
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const files = fs.readdirSync(`${process.cwd()}/src/posts/`)
 
   const paths = files.map((filename) => ({
-    params: { slug: filename.replace(".md", "") },
-  }));
+    params: { slug: filename.replace('.md', '') },
+  }))
 
   return {
     paths,
     fallback: false,
-  };
+  }
 }
 
-export function getStaticProps({ params: { slug } }) {
-  const posts = getPosts();
-  const post = getBySlug(slug);
+export const getStaticProps: GetStaticProps = ({ params: { slug } }) => {
+  const posts = getPosts()
+  const post = getBySlug(slug as string)
 
   return {
     props: {
       ...post,
       posts,
     },
-  };
+  }
 }
