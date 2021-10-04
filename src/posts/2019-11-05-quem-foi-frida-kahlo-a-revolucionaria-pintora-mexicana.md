@@ -1,11 +1,11 @@
 ---
-title: "Quem foi Frida Kahlo?"
-description: "Você sabia que Frida sofreu acidentes, internações, abortos e que teve uma relação amorosa tumultuada?"
-date: !!timestamp "2019-11-05 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana-banner_APPFmiTHb.jpg"
+title: 'Quem foi Frida Kahlo?'
+description: 'Você sabia que Frida sofreu acidentes, internações, abortos e que teve uma relação amorosa tumultuada?'
+date: !!timestamp '2019-11-05 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana-banner_APPFmiTHb.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 Em julho de 2019 completamos 65 anos sem Frida Kahlo, a emblemática pintora mexicana. Sua curta vida foi marcada pela sua história impressionante e conturbada, passando pelo acidente, as internações, os abortos e sua relação amorosa tumultuada com Diego Rivera.

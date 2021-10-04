@@ -1,11 +1,11 @@
 ---
-title: "Quem foi Diego Rivera, a Grande Paixão da Vida de Frida Kahlo"
-description: "Diego Rivera, atualmente mais conhecido como o marido de Frida, foi um artista plástico muito famoso. Conheça mais sobre ele."
-date: !!timestamp "2019-11-26 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-11-26-quem-foi-diego-rivera-a-grande-paixa_o-da-vida-de-frida-kahlo/frida-kahlo-frieda-and-diego-rivera_Q7_O2F385.jpg"
+title: 'Quem foi Diego Rivera, a Grande Paixão da Vida de Frida Kahlo'
+description: 'Diego Rivera, atualmente mais conhecido como o marido de Frida, foi um artista plástico muito famoso. Conheça mais sobre ele.'
+date: !!timestamp '2019-11-26 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-11-26-quem-foi-diego-rivera-a-grande-paixa_o-da-vida-de-frida-kahlo/frida-kahlo-frieda-and-diego-rivera_Q7_O2F385.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 [Diego Rivera](https://en.wikipedia.org/wiki/Diego_Rivera) foi um artista plástico mexicano, mais conhecido atualmente por ter sido marido da pintora também mexicana, [Frida Kahlo](https://fridakahlo.com.br/quem-foi-frida-kahlo/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana). Na época em que viveram, Diego era muito mais famoso que Frida, até pela grande diferença de idade entre eles (21 anos). O artista foi um dos maiores muralistas do México.
@@ -86,7 +86,7 @@ Entre 1936 e 1940 pintou paisagens e retratos e em 1950 ilustrou o livro Canto G
 
 ## As Principais Obras de Diego Rivera
 
-O muralismo de Rivera influenciou muitos artistas norte-americanos ao expor o seu trabalho em grandes murais nas cidades de São Francisco, Detroit e Nova Iorque. Entre suas principais obras murais estão as do Palácio do Governo, de 1929, e as do [Palácio Nacional](https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Nacional_(M%C3%A9xico)), de 1935, no México.
+O muralismo de Rivera influenciou muitos artistas norte-americanos ao expor o seu trabalho em grandes murais nas cidades de São Francisco, Detroit e Nova Iorque. Entre suas principais obras murais estão as do Palácio do Governo, de 1929, e as do [Palácio Nacional](<https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Nacional_(M%C3%A9xico)>), de 1935, no México.
 
 ![O muralismo de Rivera influenciou muitos artistas norte-americanos ao expor o seu trabalho em grandes murais nas cidades de São Francisco, Detroit e Nova Iorque.](https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-11-26-quem-foi-diego-rivera-a-grande-paixa_o-da-vida-de-frida-kahlo/diego-rivera-expos-sua-arte-em-grandes-cidades-como-san-francisco_KIIhEf7GQ.jpg)
 
@@ -128,6 +128,3 @@ O ateliê onde Diego Rivera trabalhava continua intacto, com sua bagunça e suas
 [O museu é aberto de terça a domingo das 10h às 18h](https://guia.melhoresdestinos.com.br/museu-casa-estudio-diego-rivera-e-frida-kahlo-197-5426-l.html).
 
 Diego Rivera foi um dos mais importantes muralistas do México e, sozinho, conseguiu mudar a forma como sua nação fazia arte. Apesar de hoje ser mais conhecido como o marido de Frida Kahlo, em sua época, ele era muito famoso e deixou um legado impressionante, entre murais, quadros e desenhos.
-
-
-

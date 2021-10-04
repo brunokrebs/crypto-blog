@@ -1,11 +1,11 @@
 ---
-title: "Quem Foram os Amigos de Frida Kahlo"
-description: "Frida foi uma artista singular e amada por todos que tiveram a oportunidade de conhecê-la de perto. Não por acaso, fez muitos amigos durante a vida. Conheça mais sobre os amigos da artista."
-date: !!timestamp "2020-07-20 09:00:00"
-banner: "https://ik.imagekit.io/fridakahlo//amigos-frida_SebyrJ48v.jpg"
+title: 'Quem Foram os Amigos de Frida Kahlo'
+description: 'Frida foi uma artista singular e amada por todos que tiveram a oportunidade de conhecê-la de perto. Não por acaso, fez muitos amigos durante a vida. Conheça mais sobre os amigos da artista.'
+date: !!timestamp '2020-07-20 09:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo//amigos-frida_SebyrJ48v.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 [Frida Kahlo além de uma pintora talentosa](https://fridakahlo.com.br/quem-foi-frida-kahlo/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana), foi uma artista muito singular e amada por todos que tiveram a oportunidade de conhecê-la de perto. Seus amigos eram fiéis e dedicados e por mais que muitos deles morassem distante (a maioria nos Estados Unidos), mantiveram muita correspondência e laços profundos até a morte da artista.
@@ -79,7 +79,6 @@ Quando Frida teve o seu segundo aborto no Hospital Henry Ford, Lucienne esteve a
 O estudioso e ex-comunista Bertram Wolfe e sua esposa Ella foram outros grandes amigos de Frida Kahlo e Diego Rivera. Wolfe foi o responsável pela biografia de Diego: "Diego Rivera: sua vida e sua época", enquanto Frida e Ella se tornavam amigas íntimas.
 
 Em suas correspondências, Frida se referia ao casal como "Ella linda e Boitito meus verdadeiros cuates (camaradas)" e contava em detalhes sua rotina onde quer que estivesse. Quando a pintora teve um caso com o pintor espanhol Josep Bartolí, pediu a Ella que a amiga servisse de "caixa postal" enquanto ele estivesse nos Estados Unidos.
-
 
 ## María Félix
 

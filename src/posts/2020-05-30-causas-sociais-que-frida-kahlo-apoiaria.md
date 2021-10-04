@@ -1,11 +1,11 @@
 ---
-title: "Causas Sociais que Frida Kahlo apoiaria"
-description: "Frida Kahlo foi uma mulher brava que muito lutou por seus ideais. Qual seriam as causas sociais que ela apoiaria hoje em dia?"
-date: !!timestamp "2020-05-29 09:00:00"
-banner: "https://ik.imagekit.io/fridakahlo//causas-sociais-frida_05GUU4lg5.jpg"
+title: 'Causas Sociais que Frida Kahlo apoiaria'
+description: 'Frida Kahlo foi uma mulher brava que muito lutou por seus ideais. Qual seriam as causas sociais que ela apoiaria hoje em dia?'
+date: !!timestamp '2020-05-29 09:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo//causas-sociais-frida_05GUU4lg5.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 [Frida Kahlo além de uma artista talentosa foi uma mulher extraordinária](https://fridakahlo.com.br/quem-foi-frida-kahlo/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana). Por mais que grande parte da sociedade conheça apenas a sua obra e o seu sofrimento intenso, sua vida foi recheada de lutas por seus ideais e atitudes revolucionárias. Através de cada pincelada podemos ver a sua influência política e social.

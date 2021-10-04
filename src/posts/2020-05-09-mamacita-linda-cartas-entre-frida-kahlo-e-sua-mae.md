@@ -1,11 +1,11 @@
 ---
-title: "Mamacita Linda: Cartas entre Frida Kahlo e sua mãe"
-description: "Frida Kahlo, assim que chegou aos Estados Unidos, começou a escrever cartas expressando a saudade que sentia em relação à família."
-date: !!timestamp "2020-05-09 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/cartas_vIoXOdzbw.jpg"
+title: 'Mamacita Linda: Cartas entre Frida Kahlo e sua mãe'
+description: 'Frida Kahlo, assim que chegou aos Estados Unidos, começou a escrever cartas expressando a saudade que sentia em relação à família.'
+date: !!timestamp '2020-05-09 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/cartas_vIoXOdzbw.jpg'
 author:
-  name: "Agnes Sanches"
-  picture: "https://ik.imagekit.io/fridakahlo/tr:w-75,h-75,c-at_max,cm-pad_resize,bg-FFFFFF/agnes-sanches_EKJX8RT0S.png"
+  name: 'Agnes Sanches'
+  picture: 'https://ik.imagekit.io/fridakahlo/tr:w-75,h-75,c-at_max,cm-pad_resize,bg-FFFFFF/agnes-sanches_EKJX8RT0S.png'
 ---
 
 As cartas foram escritas quando Frida Kahlo e Diego Rivera iniciaram suas viagens pelos Estados Unidos. Nas cartas Frida expressa saudades de sua família que permanecia no México, um descontentamento da vida que levava nos EUA e, principalmente, o lado afetuoso entre ela e sua mãe Matilde Calderón.

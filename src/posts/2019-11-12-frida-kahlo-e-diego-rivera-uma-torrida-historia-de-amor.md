@@ -1,11 +1,11 @@
 ---
-title: "Frida Kahlo e Diego Rivera, uma tórrida história de amor"
-description: "Frida e Diego tiveram um apaixonado e também conturbado relacionamento. Conheça a famosa história de amor da artista mexicana."
-date: !!timestamp "2019-11-12 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/frida-kahlo-e-diego-rivera-uma-torrida-historia-de-amor/frida-kahlo-e-diego-rivera-banner-and-facebook_ECUh4lWQG.jpg"
+title: 'Frida Kahlo e Diego Rivera, uma tórrida história de amor'
+description: 'Frida e Diego tiveram um apaixonado e também conturbado relacionamento. Conheça a famosa história de amor da artista mexicana.'
+date: !!timestamp '2019-11-12 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/frida-kahlo-e-diego-rivera-uma-torrida-historia-de-amor/frida-kahlo-e-diego-rivera-banner-and-facebook_ECUh4lWQG.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 Diego Rivera foi, sem dúvida nenhuma, o grande amor da vida de Frida Kahlo. Durante 25 anos, entre idas e vindas, traições e o divórcio, a vida dos dois artistas esteve entrelaçada. Foi um relacionamento apaixonado e ao mesmo tempo tempestuoso, marcado por casos extraconjugais de ambas as partes e fonte de inspiração e sofrimento para Frida.

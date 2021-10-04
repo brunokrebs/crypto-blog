@@ -1,11 +1,11 @@
 ---
-title: "Conheça a Casa Onde Morou Frida Kahlo Através de um Tour Virtual"
-description: "Você já pensou em fazer uma visita na casa em que Frida Kahlo nasceu e morou grande parte de sua vida? Você pode, e não precisa ir até o México."
-date: !!timestamp "2020-05-17 09:00:00"
-banner: "https://ik.imagekit.io/fridakahlo//casa-azul-tourvirtual_Sk4frFCut.jpg"
+title: 'Conheça a Casa Onde Morou Frida Kahlo Através de um Tour Virtual'
+description: 'Você já pensou em fazer uma visita na casa em que Frida Kahlo nasceu e morou grande parte de sua vida? Você pode, e não precisa ir até o México.'
+date: !!timestamp '2020-05-17 09:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo//casa-azul-tourvirtual_Sk4frFCut.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 Você já pensou em fazer uma visita na casa em que [Frida Kahlo](https://fridakahlo.com.br/quem-foi-frida-kahlo/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana) nasceu e morou grande parte de sua vida?

@@ -1,11 +1,11 @@
 ---
-title: "Frida Kahlo e Diego Rivera - retratos de um relacionamento"
-description: "Pra as pessoas que não conviveram direta e indiretamente com Frida e Diego, fica difícil de saber e entender o quão apaixonados eles foram um pelo outro."
-date: !!timestamp "2020-06-12 09:00:00"
-banner: "https://ik.imagekit.io/fridakahlo//idasevindas_BRM4tcXf6.jpg"
+title: 'Frida Kahlo e Diego Rivera - retratos de um relacionamento'
+description: 'Pra as pessoas que não conviveram direta e indiretamente com Frida e Diego, fica difícil de saber e entender o quão apaixonados eles foram um pelo outro.'
+date: !!timestamp '2020-06-12 09:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo//idasevindas_BRM4tcXf6.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 Que Diego Rivera foi o [grande amor](https://fridakahlo.com.br/quem-foi-frida-kahlo/frida-kahlo-e-diego-rivera-uma-torrida-historia-de-amor) de Frida Kahlo (e vice versa) todos sabemos. Que foi um romance apaixonado e tempestuoso, também. Mas para as pessoas que não conviveram direta e indiretamente com o casal, fica difícil de saber e entender o quão apaixonados eles foram um pelo outro.

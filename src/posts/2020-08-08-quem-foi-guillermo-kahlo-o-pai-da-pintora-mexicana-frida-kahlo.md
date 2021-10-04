@@ -1,11 +1,11 @@
 ---
-title: "Quem foi Guillermo Kahlo, o pai da pintora mexicana Frida Kahlo"
-description: "Guillermo Kahlo, além de ser pai da Frida, foi um extraordinário fotógrafo."
-date: !!timestamp "2020-08-08 09:00:00"
-banner: "https://ik.imagekit.io/fridakahlo//Guilhermo-Kahlo_TkeEBvr47.jpg"
+title: 'Quem foi Guillermo Kahlo, o pai da pintora mexicana Frida Kahlo'
+description: 'Guillermo Kahlo, além de ser pai da Frida, foi um extraordinário fotógrafo.'
+date: !!timestamp '2020-08-08 09:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo//Guilhermo-Kahlo_TkeEBvr47.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 [Guillermo Kahlo](https://artsandculture.google.com/entity/guillermo-kahlo/m07qm0j?hl=en) é mais conhecido por ser o pai e um dos fotógrafos da pintora mexicana Frida Kahlo. O que realmente é uma pena, pois ele fez um trabalho extraordinário como fotógrafo nas três primeiras décadas do século XX. Guillermo foi o primeiro fotógrafo oficial do Patrimônio Cultural do México.
@@ -72,4 +72,3 @@ Mais de dez anos depois de sua morte, Frida decidiu pintá-lo no quadro que se c
 ![Mais de dez anos depois de sua morte, Frida decidiu pintar Guillermo Kahlo no quadro que se chamaria Retrato de meu pai Wilhelm Kahlo, 1952](https://ik.imagekit.io/fridakahlo//guillermo-kahlo-3_S9kS8CrQ8.jpg)
 
 Tanto em seu diário, quanto em todas as cartas que escreveu e em conversa com os amigos íntimos, Frida sempre demonstrava grande afeto por seu pai, o qual se referia como um homem muito inteligente e de andar muito elegante. Seja na personalidade ou em sua obra vemos claramente a influência marcante de seu pai. Sua meticulosidade e a tendência a fazer retratos de si mesmos.
-

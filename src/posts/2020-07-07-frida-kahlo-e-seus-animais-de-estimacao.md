@@ -1,11 +1,11 @@
 ---
-title: "Frida Kahlo e seus animais de estimação"
-description: "Apesar de pouco se falar no assunto, Frida Kahlo era apaixonada por animais. Tanto é que teve diferentes animais de estimação e também os retratou em diversas obras."
-date: !!timestamp "2020-07-07 09:00:00"
-banner: "https://ik.imagekit.io/fridakahlo//frida-kahlo-e-seus-animais-de-estimacao_T6Kvljz4p.jpg"
+title: 'Frida Kahlo e seus animais de estimação'
+description: 'Apesar de pouco se falar no assunto, Frida Kahlo era apaixonada por animais. Tanto é que teve diferentes animais de estimação e também os retratou em diversas obras.'
+date: !!timestamp '2020-07-07 09:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo//frida-kahlo-e-seus-animais-de-estimacao_T6Kvljz4p.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 A pintora mexicana Frida Kahlo adorava crianças. Em dois momentos diferentes de sua vida ela chegou a dar aulas de artes para crianças. O primeiro foi em 1928, quando ela precisava de dinheiro e Diego lhe conseguiu um emprego como professora. O outro foi no início da década de 40, quando ela começou a lecionar em La Esmeralda, Escola de Pintura e Escultura do Ministério da Educação Pública na Cidade do México.

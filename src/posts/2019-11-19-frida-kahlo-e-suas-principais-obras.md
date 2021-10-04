@@ -1,11 +1,11 @@
 ---
-title: "Frida Kahlo e suas Principais Obras"
-description: "Mesmo seu trabalho tendo ficado de lado até 1970, Frida Kahlo foi uma das maiores pintoras latino-americanas."
-date: !!timestamp "2019-11-19 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/frida-kahlo-e-suas-principais-obras/frida-kahlo-e-suas-principais-obras-banner_coqCZktSD.jpg"
+title: 'Frida Kahlo e suas Principais Obras'
+description: 'Mesmo seu trabalho tendo ficado de lado até 1970, Frida Kahlo foi uma das maiores pintoras latino-americanas.'
+date: !!timestamp '2019-11-19 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/frida-kahlo-e-suas-principais-obras/frida-kahlo-e-suas-principais-obras-banner_coqCZktSD.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 Frida Kahlo foi uma das maiores pintoras latino-americanas. Seu trabalho permaneceu pouco conhecido até a década de 1970 quando historiadores e ativistas o trouxeram à tona. Hoje a artista é reconhecida no mundo inteiro por seus autorretratos que expressam toda a dor e sofrimento que teve em vida.
@@ -110,4 +110,3 @@ Apesar de nunca ter tido coragem de retratar o acidente, este quadro mostra um g
 
 Frida deixou um legado artístico intimista e muito feminino. Infelizmente suas obras só foram exaltadas depois de sua morte. A artista teve a coragem de se retratar em situações delicadas de sua vida, também vividas por outras inúmeras mulheres.
 Seus quadros retratam além de seu sofrimento, sua paixão pelo seu país e os problemas sociais da época.
-

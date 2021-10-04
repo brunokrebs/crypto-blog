@@ -1,11 +1,11 @@
 ---
-title: "A Influência da Pintora Mexicana Atualmente"
-description: "Veja como, mesmo 65 anos após sua morte, a pintora mexicana Frida Kahlo continua a influenciar a cultura pop."
-date: !!timestamp "2019-11-28 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-11-28-a-influencia-da-pintora-mexicana-atualmente/a-influencia-da-pintora-mexicana-atualmente_3VJ-TIpfK.jpeg"
+title: 'A Influência da Pintora Mexicana Atualmente'
+description: 'Veja como, mesmo 65 anos após sua morte, a pintora mexicana Frida Kahlo continua a influenciar a cultura pop.'
+date: !!timestamp '2019-11-28 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-11-28-a-influencia-da-pintora-mexicana-atualmente/a-influencia-da-pintora-mexicana-atualmente_3VJ-TIpfK.jpeg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 Mesmo após 65 anos de sua morte, [a pintora mexicana Frida Kahlo](https://fridakahlo.com.br/quem-foi-frida-kahlo/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana) continua a influenciar a cultura pop. Seu rosto estampa objetos, camisetas e vira ícone da moda e da música. Sua história de vida é exemplo de superação e símbolo do movimento feminista e [LGBTQ](https://artsandculture.google.com/theme/impacto-duradouro-de-frida-kahlo-em-artistas-lgbtq/CgISm6mFqz2HIQ).
@@ -61,4 +61,3 @@ A música Viva la Vida da famosa banda britânica Coldplay, também foi inspirad
 Frida Kahlo chegou até mesmo a ser tema de ballet. No Brasil foram vários os espetáculos inspirados na vida da pintora mexicana. Em São Luís do Maranhão, a Companhia Ateliê Contemporâneo apresentou o espetáculo Balé Frida. Enquanto em Curitiba uma apresentação de dança contemporânea intitulada “Kahlo: o espetáculo que representa Frida, uma mulher artista à frente do seu tempo” chega à sua quarta edição.
 
 A influência da icônica pintora mexicana continua a aparecer nos trabalhos de estilistas e fotógrafos, cantores e cineastas, mesmo após 65 anos de sua morte. Sua curta vida deixou uma marca gigantesca que está muito além do universo da arte. A artista conseguiu tornar-se uma das mulheres mais famosas do século 20, ao lado de personalidades como Marilyn Monroe e Jackie Kennedy.
-

@@ -1,11 +1,11 @@
 ---
-title: "O que é o Bitcoin e por que ele é tão importante?"
-description: "Saiba o que é o Bitcoin e entenda definitivamente o porquê esse cripto ativo ser um divisor de águas no mercado financeiro."
-date: !!timestamp "2021-09-28 12:00:00"
-banner: "https://cdn.pixabay.com/photo/2017/01/25/12/31/bitcoin-2007769_960_720.jpg"
+title: 'O que é o Bitcoin e por que ele é tão importante?'
+description: 'Saiba o que é o Bitcoin e entenda definitivamente o porquê esse cripto ativo ser um divisor de águas no mercado financeiro.'
+date: !!timestamp '2021-09-28 12:00:00'
+banner: 'https://cdn.pixabay.com/photo/2017/01/25/12/31/bitcoin-2007769_960_720.jpg'
 author:
-  name: "Bruno Krebs"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Bruno Krebs'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 Você pode até ter ouvido falar, mas você realmente sabe o que é o Bitcoin? Indo além da explicação óbvia, o Bitcoin é um divisor de águas que influência e influenciará a economia durante longos anos.

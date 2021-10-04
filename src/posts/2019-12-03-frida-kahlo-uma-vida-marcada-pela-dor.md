@@ -1,11 +1,11 @@
 ---
-title: "Frida Kahlo: uma Vida Marcada pela Dor"
-description: "A artista Frida Kahlo teve uma vida marcada por tragédias e dor desde sua infância, até a sua morte em 1954. Descubra pelo o que ela passou."
-date: !!timestamp "2019-12-03 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-12-03-frida-kahlo-uma-vida-marcada-pela-dor/frida-kahlo-uma-vida-marcada-pela-dor_ByFGWCs16.png"
+title: 'Frida Kahlo: uma Vida Marcada pela Dor'
+description: 'A artista Frida Kahlo teve uma vida marcada por tragédias e dor desde sua infância, até a sua morte em 1954. Descubra pelo o que ela passou.'
+date: !!timestamp '2019-12-03 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/2019-12-03-frida-kahlo-uma-vida-marcada-pela-dor/frida-kahlo-uma-vida-marcada-pela-dor_ByFGWCs16.png'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 [A artista Frida Kahlo](https://fridakahlo.com.br/quem-foi-frida-kahlo/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana) teve uma vida marcada por tragédias e dor desde sua infância, até a sua morte em 1954. Do momento que contraiu poliomielite com 5 anos de idade até a amputação de sua perna, pouco antes de morrer, a artista passou por mais de 35 cirurgias para que continuasse a viver. Foi uma sucessão de eventos dolorosos e traumáticos que mais parece ficção do que a vida real de uma das pintoras mais famosas do mundo.

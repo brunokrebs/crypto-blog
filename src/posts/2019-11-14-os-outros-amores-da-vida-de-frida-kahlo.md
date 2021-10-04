@@ -1,11 +1,11 @@
 ---
-title: "Os outros amores da vida de Frida Kahlo"
-description: "Frida e Diego ficaram juntos por quase 25 anos. Porém, seu relacionamento foi recheado de casos extraconjugais."
-date: !!timestamp "2019-11-14 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/os-outros-amores-da-vida-de-frida-kahlo/os-outros-amores-da-vida-de-frida-kahlo-banner_XVwE5pxtY.jpg"
+title: 'Os outros amores da vida de Frida Kahlo'
+description: 'Frida e Diego ficaram juntos por quase 25 anos. Porém, seu relacionamento foi recheado de casos extraconjugais.'
+date: !!timestamp '2019-11-14 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/os-outros-amores-da-vida-de-frida-kahlo/os-outros-amores-da-vida-de-frida-kahlo-banner_XVwE5pxtY.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 Não é novidade que o grande amor da vida da pintora mexicana Frida Kahlo foi o muralista Diego Rivera. Entre idas e vindas, o casal permaneceu juntos por quase 25 anos. Seu relacionamento foi intenso, apaixonado, mas também recheado de casos extraconjugais, de ambos os lados.
@@ -95,7 +95,7 @@ Não foi só com homens que Frida teve suas aventuras e casos extraconjugais. Bi
 
 Na década de 40 Frida conheceu a [cantora mexicana Chavela Vargas](https://pt.wikipedia.org/wiki/Chavela_Vargas). Ao escrever para o seu amigo, o pintor Carlos Pellicer, a artista confidenciou: "Hoje, conheci a Chavela Vargas. Extraordinária, lésbica, ela me inspira erotismo. Não sei se ela sentiu o mesmo que eu. Mas, eu acredito que seja uma mulher muito liberal, se me pedir, não duvidaria um segundo em me despir para ela".
 
-Se consumaram um relacionamento físico, até hoje não se tem certeza, mas foram muito amigas e tinham fortes sentimentos afetivos uma pela outra. Aos 81 anos, em sua autobiografia, Chavela Vargas admitiu que Frida Kahlo foi o grande amor de sua vida. A cantora mexicana era  homossexual assumida.
+Se consumaram um relacionamento físico, até hoje não se tem certeza, mas foram muito amigas e tinham fortes sentimentos afetivos uma pela outra. Aos 81 anos, em sua autobiografia, Chavela Vargas admitiu que Frida Kahlo foi o grande amor de sua vida. A cantora mexicana era homossexual assumida.
 
 ## María Félix
 

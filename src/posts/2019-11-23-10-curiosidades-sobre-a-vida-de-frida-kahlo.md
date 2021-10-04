@@ -1,11 +1,11 @@
 ---
-title: "10 Curiosidades Sobre a Vida de Frida Kahlo"
-description: "Frida Kahlo é conhecida por sua monocelha e suas obras. Mas a sua vida conturbada também contém peculiaridades intrigantes."
-date: !!timestamp "2019-11-23 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/10-curiosidades-sobre-a-vida-de-frida-kahlo/10-curiosidades-sobre-a-vida-de-frida-kahlo_ChIixtkrx.jpg"
+title: '10 Curiosidades Sobre a Vida de Frida Kahlo'
+description: 'Frida Kahlo é conhecida por sua monocelha e suas obras. Mas a sua vida conturbada também contém peculiaridades intrigantes.'
+date: !!timestamp '2019-11-23 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/10-curiosidades-sobre-a-vida-de-frida-kahlo/10-curiosidades-sobre-a-vida-de-frida-kahlo_ChIixtkrx.jpg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 [A pintora mexicana Frida Kahlo](https://fridakahlo.com.br/quem-foi-frida-kahlo/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana) foi uma das maiores artistas latino-americana de todos os tempos. Sua obra só teve reconhecimento mundial anos após a sua morte. Apesar de acreditarmos que a sua vida se resume a sua famosa "monocelha", muito sofrimento e os seus famosos autorretratos, há muitas peculiaridades que são desconhecidas de seus admiradores.
@@ -95,7 +95,7 @@ Em 1953, os médicos tiveram que amputar parte da perna direita da pintora. Sua 
 Apesar de tentar fazer graça com a situação, como era costume seu, a artista nunca mais recobrou a vontade de viver. Ao ter alta do hospital, entrou em depressão e tentou o suicídio por diversas vezes com facas e martelos. Em uma anotação em seu diário no dia 11 de fevereiro de 1954, Frida escreveu:
 
 > "Amputaram-me a perna há seis meses, deram-me séculos de tortura e há momentos em que quase perco a razão.
-Continuo querendo me matar. O Diego é que me impede de fazer isso, pois a minha vaidade me faz pensar que ele sentiria a minha falta. Ele me disse isso e eu acreditei. Mas nunca sofri tanto em toda a minha vida. Vou esperar mais um pouco."
+> Continuo querendo me matar. O Diego é que me impede de fazer isso, pois a minha vaidade me faz pensar que ele sentiria a minha falta. Ele me disse isso e eu acreditei. Mas nunca sofri tanto em toda a minha vida. Vou esperar mais um pouco."
 
 ## 10. Frida Foi de Ambulância para Sua Primeira Grande Exposição
 

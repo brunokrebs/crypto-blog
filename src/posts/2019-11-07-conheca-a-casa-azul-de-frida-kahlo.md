@@ -1,11 +1,11 @@
 ---
-title: "Conheça a Casa Azul de Frida Kahlo"
-description: "Conheça mais sobre a famosa casa onde Frida Kahlo nasceu, viveu grande parte de sua vida e morreu."
-date: !!timestamp "2019-11-07 12:00:00"
-banner: "https://ik.imagekit.io/fridakahlo/static/blog-assets/conheca-a-casa-azul-de-frida-kahlo/conheca-a-casa-azul-da-frida-kahlo-banner-and-facebook_Y6huZTw9b.jpeg"
+title: 'Conheça a Casa Azul de Frida Kahlo'
+description: 'Conheça mais sobre a famosa casa onde Frida Kahlo nasceu, viveu grande parte de sua vida e morreu.'
+date: !!timestamp '2019-11-07 12:00:00'
+banner: 'https://ik.imagekit.io/fridakahlo/static/blog-assets/conheca-a-casa-azul-de-frida-kahlo/conheca-a-casa-azul-da-frida-kahlo-banner-and-facebook_Y6huZTw9b.jpeg'
 author:
-  name: "Deise Dilkin"
-  picture: "https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg"
+  name: 'Deise Dilkin'
+  picture: 'https://ik.imagekit.io/fridakahlo/static/deise-dilkin_7V2JsjZhA.jpg'
 ---
 
 A Casa Azul, hoje um museu, foi onde [a artista Frida Kahlo](https://fridakahlo.com.br/quem-foi-frida-kahlo/quem-foi-frida-kahlo-a-revolucionaria-pintora-mexicana) nasceu, viveu grande parte de sua vida e morreu. Localizado no distrito de Coyoacán, Cidade do México, é um dos museus mais visitados do país. Não é para menos, essa casa de inconfundíveis paredes coloridas foi o endereço de quase a vida inteira de uma artista que teve sua obra muito mais reconhecida postumamente do que em vida.
