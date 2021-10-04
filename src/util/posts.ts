@@ -15,6 +15,7 @@ const parsePostsJob = postsFiles
       `${process.cwd()}/src/posts/${filename}`,
       'utf-8'
     )
+    matter['clearCache']()
     const { data: frontmatter, content: markdownContent } = matter(mdFile)
 
     frontmatter.date = formatDate(frontmatter.date)
