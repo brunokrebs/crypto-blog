@@ -7,13 +7,15 @@ const PostSummary: (posts: Post[]) => ReactNode = (posts) =>
   posts.map((post, idx) => (
     <div className="rounded-sm bg-white p-4 pb-5 shadow-sm" key={idx}>
       <Link href={post.slug}>
-        <a className="block rounded-md overflow-hidden">
-          <Image
-            src={post.frontmatter.banner}
-            alt="Landscape picture"
-            width="100%"
-            height="15rem"
-          />
+        <a className="block">
+          <div className="w-full h-60 relative">
+            <Image
+              layout="fill"
+              src={post.frontmatter.banner}
+              alt={post.frontmatter.title}
+              objectFit="cover"
+            />
+          </div>
         </a>
       </Link>
       <div className="mt-3">

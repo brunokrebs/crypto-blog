@@ -45,7 +45,14 @@ const PostPage: FC<PostPage> = ({
           <div className="xl:w-6/12 lg:w-8/12 w-full xl:ml-6 lg:mr-6">
             <div className="rounded-sm overflow-hidden bg-white shadow-sm">
               <div>
-                <Image src={banner} alt={title} width="100%" height="24rem" />
+                <div className="w-full h-96 relative">
+                  <Image
+                    layout="fill"
+                    src={banner}
+                    alt={title}
+                    objectFit="cover"
+                  />
+                </div>
               </div>
               <div className="p-4 pb-5">
                 <h1 className=" text-center block text-2xl font-semibold text-gray-700 font-roboto">
@@ -131,16 +138,15 @@ const PostPage: FC<PostPage> = ({
                     .slice(0, 3)
                     .map((post, idx) => (
                       <div className="rounded-sm bg-white p-3 pb-5" key={idx}>
-                        <a
-                          href={post.slug}
-                          className="block rounded-md overflow-hidden"
-                        >
-                          <Image
-                            src={post.frontmatter.banner}
-                            alt={post.frontmatter.title}
-                            width="100%"
-                            height="6rem"
-                          />
+                        <a href={post.slug} className="block">
+                          <div className="w-full h-24 relative">
+                            <Image
+                              layout="fill"
+                              src={post.frontmatter.banner}
+                              alt={post.frontmatter.title}
+                              objectFit="cover"
+                            />
+                          </div>
                         </a>
                         <div className="mt-3">
                           <a href={post.slug}>
@@ -167,7 +173,7 @@ const PostPage: FC<PostPage> = ({
           <div className="xl:w-4/12 lg:w-4/12 w-full mt-8 lg:mt-0">
             <SocialMedias />
             <TableOfContents content={content} />
-            <LatestPosts posts={posts.reverse()} />
+            <LatestPosts posts={posts} />
           </div>
 
           <div className="w-1/12 hidden xl:block"></div>

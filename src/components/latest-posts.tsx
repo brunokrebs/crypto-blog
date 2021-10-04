@@ -10,12 +10,14 @@ const LatestPost: FC<{ posts: Post[] }> = ({ posts }) => (
         <Link href={post.slug} key={post.slug}>
           <a className="flex group">
             <div className="flex-shrink-0">
-              <Image
-                src={post.frontmatter.banner}
-                alt={post.frontmatter.title}
-                width="5rem"
-                height="3.5rem"
-              />
+              <div className="w-20 h-14 relative">
+                <Image
+                  layout="fill"
+                  src={post.frontmatter.banner}
+                  alt={post.frontmatter.title}
+                  objectFit="cover"
+                />
+              </div>
             </div>
             <div className="flex-grow pl-3">
               <h5 className="text-md leading-5 block font-roboto font-semibold  transition group-hover:text-blue-500">

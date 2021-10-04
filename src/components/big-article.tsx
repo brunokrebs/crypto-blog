@@ -7,13 +7,15 @@ export const BigArticle: FC<{ post: Post }> = ({ post }) => {
   return (
     <div className="rounded-sm overflow-hidden bg-white shadow-sm">
       <Link href={post.slug}>
-        <a href={post.slug} className="block rounded-md overflow-hidden">
-          <Image
-            src={post.frontmatter.banner}
-            alt={post.frontmatter.title}
-            width="100%"
-            height="24rem"
-          />
+        <a href={post.slug} className="block overflow-hidden">
+          <div className="w-full h-96 relative">
+            <Image
+              layout="fill"
+              src={post.frontmatter.banner}
+              alt={post.frontmatter.title}
+              objectFit="cover"
+            />
+          </div>
         </a>
       </Link>
       <div className="p-4 pb-5">
