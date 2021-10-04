@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import * as cheerio from "cheerio";
 
 function getToC(content) {
@@ -18,7 +17,6 @@ function getToC(content) {
 
 export default function TableOfContents({ content }) {
   const headings = getToC(content);
-  console.log("headings", headings);
   return (
     <div className="w-full mt-8 bg-white shadow-sm rounded-sm p-4 ">
       <h3 className="text-xl font-semibold text-gray-700 mb-3 font-roboto">

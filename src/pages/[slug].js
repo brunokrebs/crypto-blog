@@ -1,8 +1,5 @@
 import Link from "next/link";
 import fs from "fs";
-import matter from "gray-matter";
-import { remark } from "remark";
-import remarkHtml from "remark-html";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -14,9 +11,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import SocialMedias from "../components/social-medias";
 import LatestPosts from "../components/lastest-posts";
-import remarkSlug from "remark-slug";
-import { getLatestPosts } from "../util/posts";
-import { formatDate } from "../util/dates";
+import { getPosts, getBySlug } from "../util/posts";
 import TableOfContents from "../components/table-of-contents";
 
 export default function PostPage({
@@ -179,29 +174,13 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
-  const mdFile = fs.readFileSync(
-    `${process.cwd()}/src/posts/${slug}.md`,
-    "utf-8"
-  );
-
-  matter.clearCache();
-
-  const { data: frontmatter, content: markdownContent } = matter(mdFile);
-  frontmatter.date = formatDate(frontmatter.date);
-
-  const remarkContent = await remark()
-    .use(remarkHtml)
-    .use(remarkSlug)
-    .process(markdownContent);
-  const content = remarkContent.toString();
-  const posts = getLatestPosts();
+export function getStaticProps({ params: { slug } }) {
+  const posts = getPosts();
+  const post = getBySlug(slug);
 
   return {
     props: {
-      frontmatter,
-      slug,
-      content,
+      ...post,
       posts,
     },
   };

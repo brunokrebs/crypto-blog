@@ -1,12 +1,10 @@
-import fs from "fs";
-import matter from "gray-matter";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import BigArticle from "../components/big-article";
 import PostsSummaries from "../components/posts-summaries";
 import SocialMedias from "../components/social-medias";
 import LastestPosts from "../components/lastest-posts";
-import { formatDate } from "../util/dates";
+import { getPosts } from "../util/posts";
 
 export default function Home({ posts }) {
   return (
@@ -15,7 +13,7 @@ export default function Home({ posts }) {
 
       <main className="pt-12 bg-gray-100 pb-12">
         <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
-        <div className="w-1/12 hidden xl:block"></div>
+          <div className="w-1/12 hidden xl:block"></div>
 
           <div className="xl:w-6/12 lg:w-8/12 w-full xl:ml-6 lg:mr-6">
             <BigArticle post={posts[0]} />
@@ -38,27 +36,10 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(`${process.cwd()}/src/posts/`);
-
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-
-    const markdownWithMeta = fs.readFileSync(
-      `${process.cwd()}/src/posts/${filename}`,
-      "utf-8"
-    );
-    matter.clearCache();
-    const { data: frontmatter } = matter(markdownWithMeta);
-    frontmatter.date = formatDate(frontmatter.date);
-    return {
-      slug,
-      frontmatter,
-    };
-  });
-
+  const posts = getPosts();
   return {
     props: {
-      posts: posts.reverse(),
+      posts: posts,
     },
   };
 }
